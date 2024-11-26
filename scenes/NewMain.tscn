@@ -1,0 +1,233 @@
+[gd_scene load_steps=19 format=3 uid="uid://dexxweq8e64nx"]
+
+[ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ymoxt"]
+[ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_4idm0"]
+[ext_resource type="Script" path="res://scripts/view.gd" id="3_3fnk4"]
+[ext_resource type="PackedScene" uid="uid://381nhf5rr8lh" path="res://objects/myadditions/bouncy_block.tscn" id="5_dj3nu"]
+[ext_resource type="PackedScene" uid="uid://8r4hy1jhwdso" path="res://objects/myadditions/Rocks_Prefab.tscn" id="7_7w2i7"]
+[ext_resource type="PackedScene" uid="uid://b6s034ltas3un" path="res://objects/myadditions/block_grass_overhang_low_hexagon_prefab.tscn" id="8_jckcr"]
+[ext_resource type="PackedScene" uid="uid://b2g3f0n4hod0k" path="res://objects/myadditions/block_grass_overhang_low_large_2.tscn" id="11_1bn4c"]
+[ext_resource type="PackedScene" uid="uid://cxea8lmw7cy1l" path="res://objects/player_kill_volume.tscn" id="14_iondl"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="22_1axdd"]
+[ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="23_ngj6c"]
+[ext_resource type="LabelSettings" uid="uid://daohhjonjrdx8" path="res://themes/label_settings.tres" id="24_phqxj"]
+[ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="25_qa81d"]
+[ext_resource type="Theme" uid="uid://d3avl0mr4r87l" path="res://themes/default_theme.tres" id="26_ajf2g"]
+[ext_resource type="Texture2D" uid="uid://dm50aa4qogm65" path="res://sprites/button_rectangle_depth_gloss.png" id="27_iv170"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_u8ojw"]
+auto_exposure_scale = 0.75
+dof_blur_far_distance = 0.01
+
+[sub_resource type="LabelSettings" id="LabelSettings_ri8jt"]
+font = ExtResource("25_qa81d")
+font_size = 128
+shadow_color = Color(0, 0, 0, 0.376471)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_x4d2s"]
+font = ExtResource("25_qa81d")
+font_size = 32
+shadow_color = Color(0, 0, 0, 0.376471)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v6r7m"]
+font = ExtResource("25_qa81d")
+font_size = 42
+shadow_color = Color(0, 0, 0, 0.376471)
+shadow_offset = Vector2(2, 2)
+
+[node name="Main" type="Node3D"]
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+unique_name_in_owner = true
+environment = ExtResource("1_ymoxt")
+camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
+
+[node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_4idm0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.28365, 0)
+view = NodePath("../View")
+
+[node name="View" type="Node3D" parent="." node_paths=PackedStringArray("target") groups=["View"]]
+process_mode = 3
+transform = Transform3D(0.707107, -0.298836, 0.640856, 0, 0.906308, 0.422618, -0.707107, -0.298836, 0.640856, 0, 0, 0)
+script = ExtResource("3_3fnk4")
+target = NodePath("../Player")
+
+[node name="Camera" type="Camera3D" parent="View"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+current = true
+fov = 40.0
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="block-grass-overhang-low-large_2" parent="World" instance=ExtResource("11_1bn4c")]
+
+[node name="player_kill_volume" parent="World" instance=ExtResource("14_iondl")]
+
+[node name="Bouncy-Block" parent="World" instance=ExtResource("5_dj3nu")]
+transform = Transform3D(3, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0.127226, 3.65834)
+
+[node name="Bouncy-Block2" parent="World" instance=ExtResource("5_dj3nu")]
+transform = Transform3D(3, 0, 0, 0, 0.987688, 0.156434, 0, -0.156434, 0.987688, 9.15698, 0.291229, 4.23589)
+
+[node name="Bouncy-Block3" parent="World" instance=ExtResource("5_dj3nu")]
+transform = Transform3D(3, 0, 0, 0, 0.990268, 0.139173, 0, -0.139173, 0.990268, 0, 0.0697273, 3.24736)
+
+[node name="Bouncy-Block4" parent="World" instance=ExtResource("5_dj3nu")]
+transform = Transform3D(3, 0, 0, 0, 0.992546, 0.121869, 0, -0.121869, 0.992546, 11.2327, 0.0720742, 3.26937)
+
+[node name="Bouncy-Block5" parent="World" instance=ExtResource("5_dj3nu")]
+transform = Transform3D(3, 0, 0, 0, 0.994522, 0.104528, 0, -0.104528, 0.994522, 0, 0.0211577, 2.79469)
+
+[node name="Bouncy-Block6" parent="World" instance=ExtResource("5_dj3nu")]
+transform = Transform3D(3, 0, 0, 0, 0.996194, 0.0871557, 0, -0.0871557, 0.996194, 10.7059, 0.0521961, 3.67968)
+
+[node name="Bouncy-Block7" parent="World" instance=ExtResource("5_dj3nu")]
+transform = Transform3D(3, 0, 0, 0, 0.997564, 0.0697564, 0, -0.0697564, 0.997564, 0, -0.014285, 2.31239)
+
+[node name="Bouncy-Block8" parent="World" instance=ExtResource("5_dj3nu")]
+transform = Transform3D(3, 0, 0, 0, 0.998629, 0.052336, 0, -0.052336, 0.998629, 12.7503, -0.026599, 1.76495)
+
+[node name="Bouncy-Block9" parent="World" instance=ExtResource("5_dj3nu")]
+transform = Transform3D(3, 0, 0, 0, 0.999391, 0.0348995, 0, -0.0348995, 0.999391, 0.00148773, -0.0379561, 1.75006)
+
+[node name="Bouncy-Block10" parent="World" instance=ExtResource("5_dj3nu")]
+transform = Transform3D(3, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, -0.0425335, 1.17943)
+
+[node name="Bouncy-Block11" parent="World" instance=ExtResource("5_dj3nu")]
+transform = Transform3D(4, 0, 0, 0, 0.984808, -1.73648, 0, 0.173648, 9.84808, 0, -0.045575, -1.00481)
+
+[node name="floating-island" type="Node3D" parent="World"]
+
+[node name="block-grass-overhang-low-hexagon-prefab" parent="World/floating-island" instance=ExtResource("8_jckcr")]
+transform = Transform3D(4.38, 0, 0, -5.68434e-14, 2, 0, 0, 0, 4.38, 9.1, 1.308, -3.854)
+
+[node name="block-grass-overhang-low-hexagon-prefab2" parent="World/floating-island" instance=ExtResource("8_jckcr")]
+transform = Transform3D(3.985, 0, 0, -5.68434e-14, 4, 0, 0, 0, 3.985, 6.862, 1.308, -5.502)
+
+[node name="block-grass-overhang-low-hexagon-prefab3" parent="World/floating-island" instance=ExtResource("8_jckcr")]
+transform = Transform3D(3.03542, 0, 1.7525, -5.68434e-14, 3, -2.84217e-14, -1.7525, 0, 3.03542, 6.784, 1.308, -2.93)
+
+[node name="rock-prefab" parent="World/floating-island" instance=ExtResource("7_7w2i7")]
+transform = Transform3D(-10, 1.20797e-06, 0, -1.50996e-06, -8, 0, 0, 0, 10, 8.02493, 1.30835, -4.48937)
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
+shadow_enabled = true
+shadow_opacity = 0.75
+
+[node name="HUD" type="CanvasLayer" parent="." groups=["HUD"]]
+process_mode = 3
+script = ExtResource("22_1axdd")
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="HUD/Control"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 67.0
+offset_right = 313.0
+offset_bottom = 323.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("23_ngj6c")
+
+[node name="x" type="Label" parent="HUD/Control"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 64.0
+offset_right = 144.0
+offset_bottom = 123.0
+text = "×"
+label_settings = ExtResource("24_phqxj")
+
+[node name="Level Complete" type="Label" parent="HUD/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -429.0
+offset_top = 139.0
+offset_right = 429.0
+offset_bottom = 287.0
+grow_horizontal = 2
+text = "Level Complete!"
+label_settings = SubResource("LabelSettings_ri8jt")
+
+[node name="CoinsLabel" type="Label" parent="HUD/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 144.0
+offset_top = 64.0
+offset_right = 368.0
+offset_bottom = 123.0
+text = "0"
+label_settings = ExtResource("24_phqxj")
+
+[node name="PlayAgainButton" type="Button" parent="HUD/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -196.0
+offset_top = -258.0
+offset_right = 196.0
+offset_bottom = -122.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+theme = ExtResource("26_ajf2g")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("25_qa81d")
+theme_override_font_sizes/font_size = 60
+text = "Play Again?"
+icon = ExtResource("27_iv170")
+flat = true
+icon_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="HUD/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.5
+offset_top = 59.0
+offset_right = 48.5
+offset_bottom = 115.0
+grow_horizontal = 2
+text = "00"
+label_settings = SubResource("LabelSettings_x4d2s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeNameLabel" type="Label" parent="HUD/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.0
+offset_top = 22.0
+offset_right = 49.0
+offset_bottom = 78.0
+grow_horizontal = 2
+text = "TIME"
+label_settings = SubResource("LabelSettings_v6r7m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
+[connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]
+[connection signal="pressed" from="HUD/Control/PlayAgainButton" to="HUD" method="_on_play_again_button_pressed"]

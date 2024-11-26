@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://e6jwbml72r4o"]
+[gd_scene load_steps=36 format=3 uid="uid://e6jwbml72r4o"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_apxki"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_hgw2l"]
@@ -15,10 +15,15 @@
 [ext_resource type="PackedScene" uid="uid://cnymdajj1vsqm" path="res://objects/platform.tscn" id="16_82380"]
 [ext_resource type="PackedScene" uid="uid://rjh4ifidqrfp" path="res://objects/platform_medium.tscn" id="17_qgsha"]
 [ext_resource type="PackedScene" uid="uid://c8up71en5djgm" path="res://objects/platform_falling.tscn" id="18_x8jhr"]
+[ext_resource type="PackedScene" uid="uid://ikhnhkkqet3v" path="res://models/prototyping/models/figurine-cube-detailed.glb" id="19_22kb0"]
 [ext_resource type="PackedScene" uid="uid://uqr4hswv6d2g" path="res://objects/platform_grass_large_round.tscn" id="19_qait6"]
 [ext_resource type="PackedScene" uid="uid://dfpisimsgf5ce" path="res://objects/coin.tscn" id="20_lfsn4"]
+[ext_resource type="PackedScene" uid="uid://db7fkewlj24kc" path="res://models/prototyping/models/figurine-cube.glb" id="20_phdlq"]
+[ext_resource type="PackedScene" uid="uid://crc0j17m4g524" path="res://models/prototyping/models/figurine-large.glb" id="21_dbs27"]
 [ext_resource type="PackedScene" uid="uid://dy017k58p20sk" path="res://objects/cloud.tscn" id="21_dryjk"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="22_1dx8f"]
+[ext_resource type="PackedScene" uid="uid://s1vhvhdf4sn0" path="res://models/prototyping/models/figurine.glb" id="22_xtorj"]
+[ext_resource type="PackedScene" uid="uid://02v51studkj5" path="res://models/props/block-moving-blue.glb" id="23_4pxhw"]
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="23_324j0"]
 [ext_resource type="LabelSettings" uid="uid://daohhjonjrdx8" path="res://themes/label_settings.tres" id="24_6hsja"]
 [ext_resource type="PackedScene" uid="uid://dbr3dh46cbskt" path="res://objects/wall.tscn" id="25_ow4b3"]
@@ -191,6 +196,23 @@ transform = Transform3D(1.56209, -1.37982, 1.71508, 1.97375, 1.80907, -0.342241,
 
 [node name="cube14" parent="World" instance=ExtResource("21_dryjk")]
 transform = Transform3D(1.56209, -1.37982, 1.71508, 1.97375, 1.80907, -0.342241, -0.974547, 1.4522, 2.05595, -15.866, 2.03819, 7.83702)
+
+[node name="Node3D" type="Node3D" parent="World"]
+
+[node name="figurine-cube-detailed2" parent="World" instance=ExtResource("19_22kb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.39682, 1.45134, 2.53997)
+
+[node name="figurine-cube2" parent="World" instance=ExtResource("20_phdlq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78316, 1.45134, 1.83033)
+
+[node name="figurine-large2" parent="World" instance=ExtResource("21_dbs27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51403, 1.45134, 1.71558)
+
+[node name="figurine2" parent="World" instance=ExtResource("22_xtorj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13839, 1.45134, 3.00744)
+
+[node name="block-moving-blue2" parent="World" instance=ExtResource("23_4pxhw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2287, 2.61817, 0.205354)
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)

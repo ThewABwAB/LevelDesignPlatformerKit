@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://381nhf5rr8lh"]
+
+[ext_resource type="PackedScene" uid="uid://02v51studkj5" path="res://models/props/block-moving-blue.glb" id="1_7ptol"]
+[ext_resource type="PackedScene" uid="uid://bunxb353h3lje" path="res://objects/damage_dealer_area_3d.tscn" id="2_ofyy8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w0216"]
+size = Vector3(1, 0.505127, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qjmdx"]
+size = Vector3(1, 0.501221, 1)
+
+[node name="Bouncy-Block" instance=ExtResource("1_7ptol")]
+
+[node name="DamageDealerArea3D" parent="." index="0" instance=ExtResource("2_ofyy8")]
+only_push = true
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="DamageDealerArea3D" index="1"]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, -0.00093472, -0.253614, -0.000162363)
+shape = SubResource("BoxShape3D_w0216")
+
+[node name="block-moving-blue" parent="." index="1"]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, -0.503568, 0)
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" index="0"]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, -0.254178, 0)
+shape = SubResource("BoxShape3D_qjmdx")

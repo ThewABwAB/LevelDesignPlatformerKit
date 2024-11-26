@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://csd28xr6ti6kv"]
+
+[ext_resource type="PackedScene" uid="uid://c7vove886ept4" path="res://models/props/block-grass-overhang-edge.glb" id="1_6ad67"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rntip"]
+size = Vector3(1, 0.403076, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u2482"]
+size = Vector3(1, 1, 0.550201)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y574b"]
+size = Vector3(1, 0.746613, 0.359583)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="block-grass-overhang-edge2" parent="." instance=ExtResource("1_6ad67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.201538, 0)
+shape = SubResource("BoxShape3D_rntip")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -0.224899)
+shape = SubResource("BoxShape3D_u2482")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.798636, -0.601815, 0, 0.601815, 0.798636, 0, -0.593924, 0.131245)
+shape = SubResource("BoxShape3D_y574b")
+
+[editable path="block-grass-overhang-edge2"]
