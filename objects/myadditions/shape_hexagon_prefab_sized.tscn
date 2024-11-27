@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj2o25a7mcceg"]
+
+[ext_resource type="PackedScene" uid="uid://dhl7cyb0eqgnn" path="res://models/prototyping/models/shape-hexagon.glb" id="1_dhdhe"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uueo4"]
+size = Vector3(1, 1, 0.576477)
+
+[node name="shape-hexagon-prefab" instance=ExtResource("1_dhdhe")]
+
+[node name="shape-hexagon" parent="." index="0"]
+transform = Transform3D(1.155, 0, 0, 0, 1, 0, 0, 0, 1.155, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.000274658)
+shape = SubResource("BoxShape3D_uueo4")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 0, 0.5, 0.000274658)
+shape = SubResource("BoxShape3D_uueo4")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2"]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 0, 0.5, 0.000274658)
+shape = SubResource("BoxShape3D_uueo4")
