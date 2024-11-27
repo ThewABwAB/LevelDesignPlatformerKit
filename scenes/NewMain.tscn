@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dexxweq8e64nx"]
+[gd_scene load_steps=22 format=3 uid="uid://dexxweq8e64nx"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ymoxt"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_4idm0"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://381nhf5rr8lh" path="res://objects/myadditions/bouncy_block.tscn" id="5_dj3nu"]
 [ext_resource type="PackedScene" uid="uid://8r4hy1jhwdso" path="res://objects/myadditions/Rocks_Prefab.tscn" id="7_7w2i7"]
 [ext_resource type="PackedScene" uid="uid://ccqfo20ixj33c" path="res://objects/myadditions/floating_island.tscn" id="7_eql6p"]
+[ext_resource type="PackedScene" uid="uid://yj2m4yqvkt2c" path="res://models/props/block-grass-overhang-hexagon.glb" id="7_rahpd"]
 [ext_resource type="PackedScene" uid="uid://b6s034ltas3un" path="res://objects/myadditions/block_grass_overhang_low_hexagon_prefab.tscn" id="8_jckcr"]
+[ext_resource type="PackedScene" uid="uid://5ltihbra4hfb" path="res://models/props/block-grass-hexagon.glb" id="8_tj7gx"]
 [ext_resource type="PackedScene" uid="uid://b2g3f0n4hod0k" path="res://objects/myadditions/block_grass_overhang_low_large_2.tscn" id="11_1bn4c"]
 [ext_resource type="PackedScene" uid="uid://cxea8lmw7cy1l" path="res://objects/player_kill_volume.tscn" id="14_iondl"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="22_1axdd"]
@@ -98,6 +100,10 @@ transform = Transform3D(3, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, -0.0425335, 
 
 [node name="Bouncy-Block11" parent="World" instance=ExtResource("5_dj3nu")]
 transform = Transform3D(4, 0, 0, 0, 0.984808, -1.73648, 0, 0.173648, 9.84808, 0, -0.045575, -1.00481)
+
+[node name="block-grass-overhang-hexagon2" parent="World" instance=ExtResource("7_rahpd")]
+
+[node name="block-grass-hexagon2" parent="World" instance=ExtResource("8_tj7gx")]
 
 [node name="floating-island" parent="World" instance=ExtResource("7_eql6p")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -14.1537, -14.1393, 10.7789)
