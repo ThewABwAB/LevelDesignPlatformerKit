@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccqfo20ixj33c"]
+
+[ext_resource type="PackedScene" uid="uid://b6s034ltas3un" path="res://objects/myadditions/block_grass_overhang_low_hexagon_prefab.tscn" id="1_iuwxd"]
+[ext_resource type="PackedScene" uid="uid://8r4hy1jhwdso" path="res://objects/myadditions/Rocks_Prefab.tscn" id="2_ren5i"]
+
+[node name="floating-island" type="Node3D"]
+
+[node name="block-grass-overhang-low-hexagon-prefab" parent="." instance=ExtResource("1_iuwxd")]
+transform = Transform3D(4.38, 0, 0, -5.68434e-14, 2, 0, 0, 0, 4.38, 1.24027, 1.308, 0.54581)
+
+[node name="block-grass-overhang-low-hexagon-prefab2" parent="." instance=ExtResource("1_iuwxd")]
+transform = Transform3D(3.985, 2.85287e-14, 0, -5.68434e-14, 2, 0, 0, 0, 3.985, -0.997731, 1.308, -1.10219)
+
+[node name="block-grass-overhang-low-hexagon-prefab3" parent="." instance=ExtResource("1_iuwxd")]
+transform = Transform3D(3.03542, 2.80901e-14, 1.7525, -5.68434e-14, 2, 0, -1.7525, -1.62178e-14, 3.03542, -1.07573, 1.308, 1.46981)
+
+[node name="rock-prefab" parent="." instance=ExtResource("2_ren5i")]
+transform = Transform3D(-10, 1.50996e-06, 0, -1.50996e-06, -10, 0, 0, 0, 10, 0.165199, 1.30835, -0.0895603)

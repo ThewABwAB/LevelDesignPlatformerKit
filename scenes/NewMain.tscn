@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://dexxweq8e64nx"]
+[gd_scene load_steps=20 format=3 uid="uid://dexxweq8e64nx"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ymoxt"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_4idm0"]
 [ext_resource type="Script" path="res://scripts/view.gd" id="3_3fnk4"]
 [ext_resource type="PackedScene" uid="uid://381nhf5rr8lh" path="res://objects/myadditions/bouncy_block.tscn" id="5_dj3nu"]
 [ext_resource type="PackedScene" uid="uid://8r4hy1jhwdso" path="res://objects/myadditions/Rocks_Prefab.tscn" id="7_7w2i7"]
+[ext_resource type="PackedScene" uid="uid://ccqfo20ixj33c" path="res://objects/myadditions/floating_island.tscn" id="7_eql6p"]
 [ext_resource type="PackedScene" uid="uid://b6s034ltas3un" path="res://objects/myadditions/block_grass_overhang_low_hexagon_prefab.tscn" id="8_jckcr"]
 [ext_resource type="PackedScene" uid="uid://b2g3f0n4hod0k" path="res://objects/myadditions/block_grass_overhang_low_large_2.tscn" id="11_1bn4c"]
 [ext_resource type="PackedScene" uid="uid://cxea8lmw7cy1l" path="res://objects/player_kill_volume.tscn" id="14_iondl"]
@@ -45,7 +46,7 @@ environment = ExtResource("1_ymoxt")
 camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
 
 [node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_4idm0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.28365, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.8351, 3.0387, 0)
 view = NodePath("../View")
 
 [node name="View" type="Node3D" parent="." node_paths=PackedStringArray("target") groups=["View"]]
@@ -98,19 +99,35 @@ transform = Transform3D(3, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, -0.0425335, 
 [node name="Bouncy-Block11" parent="World" instance=ExtResource("5_dj3nu")]
 transform = Transform3D(4, 0, 0, 0, 0.984808, -1.73648, 0, 0.173648, 9.84808, 0, -0.045575, -1.00481)
 
-[node name="floating-island" type="Node3D" parent="World"]
+[node name="floating-island" parent="World" instance=ExtResource("7_eql6p")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -14.1537, -14.1393, 10.7789)
 
-[node name="block-grass-overhang-low-hexagon-prefab" parent="World/floating-island" instance=ExtResource("8_jckcr")]
-transform = Transform3D(4.38, 0, 0, -5.68434e-14, 2, 0, 0, 0, 4.38, 9.1, 1.308, -3.854)
+[node name="block-grass-overhang-low-hexagon-prefab4" parent="World" instance=ExtResource("8_jckcr")]
+transform = Transform3D(3.31, 1.3562e-14, 0, -2.14785e-14, 2.09, 0, 0, 0, 3.31, 60.8273, 1.308, 1.09162)
 
-[node name="block-grass-overhang-low-hexagon-prefab2" parent="World/floating-island" instance=ExtResource("8_jckcr")]
-transform = Transform3D(3.985, 0, 0, -5.68434e-14, 4, 0, 0, 0, 3.985, 6.862, 1.308, -5.502)
+[node name="block-grass-overhang-low-hexagon-prefab5" parent="World" instance=ExtResource("8_jckcr")]
+transform = Transform3D(3.01, 1.42643e-14, 0, -2.14678e-14, 2, 0, 0, 0, 3.01, 56.3513, 1.308, -2.20438)
 
-[node name="block-grass-overhang-low-hexagon-prefab3" parent="World/floating-island" instance=ExtResource("8_jckcr")]
-transform = Transform3D(3.03542, 0, 1.7525, -5.68434e-14, 3, -2.84217e-14, -1.7525, 0, 3.03542, 6.784, 1.308, -2.93)
+[node name="block-grass-overhang-low-hexagon-prefab6" parent="World" instance=ExtResource("8_jckcr")]
+transform = Transform3D(2.29497, 1.53091e-14, 1.325, -2.14886e-14, 2.18, -3.84246e-21, -1.325, -8.8387e-15, 2.29497, 56.1953, 1.308, 2.93962)
 
-[node name="rock-prefab" parent="World/floating-island" instance=ExtResource("7_7w2i7")]
-transform = Transform3D(-10, 1.20797e-06, 0, -1.50996e-06, -8, 0, 0, 0, 10, 8.02493, 1.30835, -4.48937)
+[node name="rock-prefab2" parent="World" instance=ExtResource("7_7w2i7")]
+transform = Transform3D(-20, 6.03983e-06, 0, -1.50996e-06, -20, 0, 0, 0, 20, 58.6772, 1.30835, -0.179121)
+
+[node name="floating-island2" type="Node3D" parent="World"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 37.9786, 0, 0)
+
+[node name="block-grass-overhang-low-hexagon-prefab" parent="World/floating-island2" instance=ExtResource("8_jckcr")]
+transform = Transform3D(4.38, 2.71239e-14, 0, -5.68434e-14, 2.09, 0, 0, 0, 4.38, 1.24027, 1.308, 0.54581)
+
+[node name="block-grass-overhang-low-hexagon-prefab2" parent="World/floating-island2" instance=ExtResource("8_jckcr")]
+transform = Transform3D(3.985, 2.85287e-14, 0, -5.68434e-14, 2, 0, 0, 0, 3.985, -0.997731, 1.308, -1.10219)
+
+[node name="block-grass-overhang-low-hexagon-prefab3" parent="World/floating-island2" instance=ExtResource("8_jckcr")]
+transform = Transform3D(3.03542, 3.06182e-14, 1.7525, -5.68434e-14, 2.18, -1.69407e-21, -1.7525, -1.76774e-14, 3.03542, -1.07573, 1.308, 1.46981)
+
+[node name="rock-prefab" parent="World/floating-island2" instance=ExtResource("7_7w2i7")]
+transform = Transform3D(-10, 3.01992e-06, 0, -1.50996e-06, -20, 0, 0, 0, 10, 0.165199, 1.30835, -0.0895603)
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdfsgexqn7ide"]
+
+[ext_resource type="PackedScene" uid="uid://yj2m4yqvkt2c" path="res://models/props/block-grass-overhang-hexagon.glb" id="1_itkoy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b67fd"]
+size = Vector3(1, 1, 0.576477)
+
+[node name="block-grass-overhang-hexagon-prefab" instance=ExtResource("1_itkoy")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.000274658)
+shape = SubResource("BoxShape3D_b67fd")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 0, 0.5, 0.000274658)
+shape = SubResource("BoxShape3D_b67fd")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2"]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 0, 0.5, 0.000274658)
+shape = SubResource("BoxShape3D_b67fd")

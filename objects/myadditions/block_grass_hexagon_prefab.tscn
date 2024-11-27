@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6ykdgdmxjoo6"]
+
+[ext_resource type="PackedScene" uid="uid://5ltihbra4hfb" path="res://models/props/block-grass-hexagon.glb" id="1_7ybnj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s8do7"]
+size = Vector3(1, 1, 0.576477)
+
+[node name="block-grass-hexagon-prefab" instance=ExtResource("1_7ybnj")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.000274658)
+shape = SubResource("BoxShape3D_s8do7")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 0, 0.5, 0.000274658)
+shape = SubResource("BoxShape3D_s8do7")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2"]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 0, 0.5, 0.000274658)
+shape = SubResource("BoxShape3D_s8do7")
