@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccqfo20ixj33c"]
 
-[ext_resource type="PackedScene" uid="uid://b6s034ltas3un" path="res://objects/myadditions/block_grass_overhang_low_hexagon_prefab.tscn" id="1_iuwxd"]
+[ext_resource type="PackedScene" uid="uid://b6s034ltas3un" path="res://objects/myadditions/Hexagons/block_grass_overhang_low_hexagon_prefab.tscn" id="1_iuwxd"]
 [ext_resource type="PackedScene" uid="uid://8r4hy1jhwdso" path="res://objects/myadditions/Rocks_Prefab.tscn" id="2_ren5i"]
 
 [node name="floating-island" type="Node3D"]

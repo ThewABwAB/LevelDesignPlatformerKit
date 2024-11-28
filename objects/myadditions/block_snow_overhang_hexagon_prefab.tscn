@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bir46ymnk0156"]
+
+[ext_resource type="PackedScene" uid="uid://8nbyyf4tfxpc" path="res://models/props/block-snow-overhang-hexagon.glb" id="1_uhtg6"]
+[ext_resource type="Texture2D" uid="uid://72ldk18ropuj" path="res://models/props/Textures/colormap.png" id="2_numgp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5tfm"]
+albedo_texture = ExtResource("2_numgp")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ynfj2"]
+size = Vector3(1, 1, 0.576477)
+
+[node name="block-snow-overhang-hexagon-prefab" instance=ExtResource("1_uhtg6")]
+
+[node name="block-snow-overhang-hexagon" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_s5tfm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.000274658)
+shape = SubResource("BoxShape3D_ynfj2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 0, 0.5, 0.000274658)
+shape = SubResource("BoxShape3D_ynfj2")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2"]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 0, 0.5, 0.000274658)
+shape = SubResource("BoxShape3D_ynfj2")
