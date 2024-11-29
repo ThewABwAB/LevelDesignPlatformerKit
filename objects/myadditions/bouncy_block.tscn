@@ -9,7 +9,7 @@ size = Vector3(1, 0.505127, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_qjmdx"]
 size = Vector3(1, 0.501221, 1)
 
-[node name="Bouncy-Block" instance=ExtResource("1_7ptol")]
+[node name="Bumper-Block" instance=ExtResource("1_7ptol")]
 
 [node name="DamageDealerArea3D" parent="." index="0" instance=ExtResource("2_ofyy8")]
 only_push = true
