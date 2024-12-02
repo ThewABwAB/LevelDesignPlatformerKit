@@ -7,16 +7,16 @@ size = Vector3(0.86557, 1, 0.501682)
 
 [node name="shape-hexagon-prefab" instance=ExtResource("1_k2m2q")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="shape-hexagon" index="0"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shape-hexagon/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000259399, 0.5, 0.000341445)
 shape = SubResource("BoxShape3D_i6plw")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="shape-hexagon/StaticBody3D" index="1"]
 transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 0.000259399, 0.5, 0.000341445)
 shape = SubResource("BoxShape3D_i6plw")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="shape-hexagon/StaticBody3D" index="2"]
 transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 0.000259399, 0.5, 0.000341445)
 shape = SubResource("BoxShape3D_i6plw")

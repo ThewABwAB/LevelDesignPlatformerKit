@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://lxdl28ycf7d3"]
+
+[ext_resource type="PackedScene" uid="uid://c0n2315wnksre" path="res://models/prototyping/models/shape-cube-half.glb" id="1_refst"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eru10"]
+size = Vector3(1, 0.500427, 1)
+
+[node name="shape-cube-half-prefab" instance=ExtResource("1_refst")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="shape-cube-half" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shape-cube-half/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.249786, 0)
+shape = SubResource("BoxShape3D_eru10")

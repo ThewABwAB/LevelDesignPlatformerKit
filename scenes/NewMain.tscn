@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dexxweq8e64nx"]
+[gd_scene load_steps=31 format=3 uid="uid://dexxweq8e64nx"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ymoxt"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_4idm0"]
@@ -24,11 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://cde1gdldoewyg" path="res://models/props/block-grass-overhang-large-tall.glb" id="26_e5eih"]
 [ext_resource type="PackedScene" uid="uid://r4pt45l3s0rb" path="res://models/props/block-grass-overhang-large.glb" id="27_12nkl"]
 [ext_resource type="Texture2D" uid="uid://dm50aa4qogm65" path="res://sprites/button_rectangle_depth_gloss.png" id="27_iv170"]
-[ext_resource type="PackedScene" uid="uid://bcelcc2hak4kr" path="res://models/prototyping/models/column-low.glb" id="28_ikxk1"]
-[ext_resource type="PackedScene" uid="uid://bs65o07otxbmm" path="res://objects/moving_object_path_3d.tscn" id="28_r07oc"]
-[ext_resource type="PackedScene" uid="uid://7lmuj1b4d41i" path="res://models/prototyping/models/column-rounded-low.glb" id="29_62hrs"]
-[ext_resource type="PackedScene" uid="uid://uqr4hswv6d2g" path="res://objects/platform_grass_large_round.tscn" id="29_nyuni"]
-[ext_resource type="PackedScene" uid="uid://g73m8k0j7lyo" path="res://objects/button.tscn" id="30_6uhii"]
+[ext_resource type="PackedScene" uid="uid://chm1umlmcosyr" path="res://objects/myadditions/greatsword.tscn" id="29_xq255"]
 [ext_resource type="PackedScene" uid="uid://ddtf78lrj7c73" path="res://models/prototyping/models/shape-cube-rounded.glb" id="30_cufop"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_u8ojw"]
@@ -53,13 +49,6 @@ font_size = 42
 shadow_color = Color(0, 0, 0, 0.376471)
 shadow_offset = Vector2(2, 2)
 
-[sub_resource type="Curve3D" id="Curve3D_k5l1e"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 44.72, 1.55313, -5.04279, 0, 0, 0, 0, 0, 0, 37.9974, 3.85081, -16.639, 0, 0, 0, 0, 0, 0, 55.4537, 5.15526, -9.43004, 0, 0, 0, 0, 0, 0, 44.72, 1.55313, -5.04279),
-"tilts": PackedFloat32Array(0, 0, 0, 0)
-}
-point_count = 4
-
 [node name="Main" type="Node3D"]
 
 [node name="Environment" type="WorldEnvironment" parent="."]
@@ -68,7 +57,7 @@ environment = ExtResource("1_ymoxt")
 camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
 
 [node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_4idm0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.8351, 3.0387, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.0238, 16.297, -50.535)
 view = NodePath("../View")
 
 [node name="View" type="Node3D" parent="." node_paths=PackedStringArray("target") groups=["View"]]
@@ -223,7 +212,7 @@ transform = Transform3D(6.07084, -5.68434e-13, 3.505, 2.84217e-13, 2.18, 5.11591
 transform = Transform3D(-20, 6.03984e-06, 0, -1.50996e-06, -20, 0, 0, 0, 20, 0, 0, 0)
 
 [node name="floating-island-simple2" type="Node3D" parent="World"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.309, 1.30835, -25.7735)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 38.309, 1.30835, -53.6738)
 
 [node name="shape-hexagon-prefab-sized3" parent="World/floating-island-simple2" instance=ExtResource("17_ntwrg")]
 transform = Transform3D(8.76, 0, 0, 0, 6, 0, 0, 0, 8.76, 2.15014, -0.00034976, 1.27074)
@@ -374,27 +363,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5177, 6.33728, -29.4273)
 [node name="block-grass-overhang-large2" parent="." instance=ExtResource("27_12nkl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5642, 6.33728, -27.4021)
 
-[node name="moving_object_path" parent="." node_paths=PackedStringArray("object_to_move") instance=ExtResource("28_r07oc")]
-curve = SubResource("Curve3D_k5l1e")
-object_to_move = NodePath("../platform-grass-large-round")
-movement_speed = 2.0
-is_on_from_start = false
-
-[node name="platform-grass-large-round" parent="." instance=ExtResource("29_nyuni")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.2242, 1.55313, -4.19646)
-
-[node name="button" parent="platform-grass-large-round" node_paths=PackedStringArray("target") instance=ExtResource("30_6uhii")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107124, 0.515685, 0.155089)
-target = NodePath("../../moving_object_path")
-
-[node name="column-low2" parent="." instance=ExtResource("28_ikxk1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2186, 8.35335, -25.4415)
-
-[node name="column-rounded-low2" parent="." instance=ExtResource("29_62hrs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.9827, 8.35335, -25.7492)
-
 [node name="shape-cube-rounded2" parent="." instance=ExtResource("30_cufop")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.6246, 8.35335, -26.8022)
+
+[node name="greatsword" parent="." instance=ExtResource("29_xq255")]
+transform = Transform3D(0.0167544, -0.98467, -0.173624, 0, 0.173648, -0.984808, 0.99986, 0.0164999, 0.00290937, 46.6133, 16.8668, -50.2468)
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]

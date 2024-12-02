@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn224fvfmckb2"]
+
+[ext_resource type="PackedScene" uid="uid://cqtcet0j5lxdt" path="res://models/prototyping/models/pipe.glb" id="1_i0mw2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nnjx2"]
+size = Vector3(0.0995712, 1, 0.173141)
+
+[node name="pipe-prefab" instance=ExtResource("1_i0mw2")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="pipe" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pipe/StaticBody3D" index="0"]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 0.000119537, 0.5, 0.000143885)
+shape = SubResource("BoxShape3D_nnjx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="pipe/StaticBody3D" index="1"]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 0.000119537, 0.5, 0.000143885)
+shape = SubResource("BoxShape3D_nnjx2")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="pipe/StaticBody3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000119537, 0.5, 0.000143885)
+shape = SubResource("BoxShape3D_nnjx2")
