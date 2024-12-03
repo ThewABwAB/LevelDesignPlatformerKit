@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2o6oot1dyat7"]
+
+[ext_resource type="PackedScene" uid="uid://mjfom53x6yfb" path="res://models/props/block-grass-overhang-corner.glb" id="1_imx4j"]
+[ext_resource type="Texture2D" uid="uid://b3dcegptytkk4" path="res://models/props/Textures/new_colormap.png" id="2_t2fv8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bi8pr"]
+albedo_texture = ExtResource("2_t2fv8")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aaetn"]
+size = Vector3(0.452839, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_px781"]
+size = Vector3(0.210205, 1, 0.286499)
+
+[node name="block-grass-overhang-corner-prefab" instance=ExtResource("1_imx4j")]
+
+[node name="block-grass-overhang-corner" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_bi8pr")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000440598, 0.5, 0)
+shape = SubResource("BoxShape3D_aaetn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" index="1"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.000440598, 0.5, 0)
+shape = SubResource("BoxShape3D_aaetn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="AnimatableBody3D" index="2"]
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, 0.268741, 0.5, 0.327544)
+shape = SubResource("BoxShape3D_px781")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="AnimatableBody3D" index="3"]
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -0.267907, 0.5, -0.327119)
+shape = SubResource("BoxShape3D_px781")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="AnimatableBody3D" index="4"]
+transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, -0.268749, 0.5, 0.327099)
+shape = SubResource("BoxShape3D_px781")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="AnimatableBody3D" index="5"]
+transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 0.269003, 0.5, -0.327177)
+shape = SubResource("BoxShape3D_px781")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="AnimatableBody3D" index="6"]
+transform = Transform3D(0.382683, 0, -0.923879, 0, 1, 0, 0.923879, 0, 0.382683, 0.328031, 0.5, -0.268629)
+shape = SubResource("BoxShape3D_px781")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="AnimatableBody3D" index="7"]
+transform = Transform3D(0.382683, 0, -0.923879, 0, 1, 0, 0.923879, 0, 0.382683, -0.326764, 0.5, 0.26856)
+shape = SubResource("BoxShape3D_px781")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="AnimatableBody3D" index="8"]
+transform = Transform3D(0.382683, 0, 0.923879, 0, 1, 0, -0.923879, 0, 0.382683, 0.328014, 0.5, 0.268545)
+shape = SubResource("BoxShape3D_px781")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="AnimatableBody3D" index="9"]
+transform = Transform3D(0.382683, 0, 0.923879, 0, 1, 0, -0.923879, 0, 0.382683, -0.327599, 0.5, -0.26956)
+shape = SubResource("BoxShape3D_px781")
