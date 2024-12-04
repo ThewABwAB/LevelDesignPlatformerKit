@@ -1,9 +1,9 @@
 extends Node3D
 var mesh : MeshInstance3D
 ##At less than this distance the object will become fully transparent
-@export var min_distance_dither : float = 2
+@export var min_distance_dither : float = 0
 ##At more than this distance the object will become fully opaque
-@export var max_distance_dither : float = 5
+@export var max_distance_dither : float = 7
 var mesh_mat : Material
 
 # Called when the node enters the scene tree for the first time.

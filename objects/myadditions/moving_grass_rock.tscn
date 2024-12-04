@@ -1,0 +1,98 @@
+[gd_scene load_steps=4 format=3 uid="uid://bshy222lwr7ra"]
+
+[ext_resource type="PackedScene" uid="uid://dany02f014xwk" path="res://objects/myadditions/grass_cube_better.tscn" id="1_n6yne"]
+[ext_resource type="PackedScene" uid="uid://t5mn3rn1i8m8" path="res://objects/myadditions/rock-cube.tscn" id="2_oqy42"]
+[ext_resource type="PackedScene" uid="uid://by1jl0m0dpmbq" path="res://objects/myadditions/grass_cube_new.tscn" id="3_lym55"]
+
+[node name="moving-grass-rock" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+
+[node name="grass_cube_better" parent="." instance=ExtResource("1_n6yne")]
+transform = Transform3D(3, 0, 0, 0, 0.72, 0, 0, 0, 3, 0, 2.22597, 0)
+
+[node name="rock-cube" parent="." instance=ExtResource("2_oqy42")]
+transform = Transform3D(2.88, 0, 0, 0, 2.88, 0, 0, 0, 2.88, 0, 0, 0)
+
+[node name="grass-cube-new" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-1.48361e-08, 1.48361e-08, -0.6, 0.339411, 0.339411, 0, 0.339411, -0.339411, -2.62268e-08, -1.19402, 2.26845, -0.473573)
+
+[node name="grass-cube-new2" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-1.85452e-08, 1.85452e-08, -0.6, 0.424264, 0.424264, 0, 0.424264, -0.424264, -2.62268e-08, -1.19249, 2.10892, -0.070704)
+
+[node name="grass-cube-new3" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-1.85452e-08, 1.85452e-08, -0.6, 0.424264, 0.424264, 0, 0.424264, -0.424264, -2.62268e-08, -1.19249, 2.15567, 0.32138)
+
+[node name="grass-cube-new4" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-1.48361e-08, 1.48361e-08, -0.6, 0.339411, 0.339411, 0, 0.339411, -0.339411, -2.62268e-08, -1.19121, 2.22112, 0.636672)
+
+[node name="grass-cube-new5" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-1.48361e-08, 1.48361e-08, -0.6, 0.339411, 0.339411, 0, 0.339411, -0.339411, -2.62268e-08, -1.19216, 2.26845, 0.886494)
+
+[node name="grass-cube-new6" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(0.18, -0.18, -0.424264, 0.254558, 0.254558, 0, 0.18, -0.18, 0.424264, -1.00364, 2.26845, 1.1811)
+
+[node name="grass-cube-new7" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-0.0550969, 0.0550969, -0.579409, 0.212132, 0.212132, 0, 0.204852, -0.204852, -0.155837, -1.18994, 2.28123, -0.863052)
+
+[node name="grass-cube-new8" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(0.339411, -0.339411, 0, 0.339411, 0.339411, 0, 0, 0, 0.6, -0.473573, 2.26845, 1.19402)
+
+[node name="grass-cube-new9" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(0.204852, -0.204852, -0.155837, 0.212132, 0.212132, 0, 0.0550969, -0.0550969, 0.579409, -0.863052, 2.28123, 1.18994)
+
+[node name="grass-cube-new10" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(0.339411, -0.339411, 0, 0.339411, 0.339411, 0, 0, 0, 0.6, 0.636672, 2.22112, 1.19121)
+
+[node name="grass-cube-new11" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(0.339411, -0.339411, 0, 0.339411, 0.339411, 0, 0, 0, 0.6, 0.886494, 2.26845, 1.19216)
+
+[node name="grass-cube-new12" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(0.18, -0.18, 0.424264, 0.254558, 0.254558, 0, -0.18, 0.18, 0.424264, 1.1811, 2.26845, 1.00364)
+
+[node name="grass-cube-new13" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(0.424264, -0.424264, 0, 0.424264, 0.424264, 0, 0, 0, 0.6, -0.070704, 2.10892, 1.19249)
+
+[node name="grass-cube-new14" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(0.424264, -0.424264, 0, 0.424264, 0.424264, 0, 0, 0, 0.6, 0.32138, 2.15567, 1.19249)
+
+[node name="grass-cube-new15" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-1.48361e-08, 1.48361e-08, 0.6, 0.339411, 0.339411, 0, -0.339411, 0.339411, -2.62268e-08, 1.19402, 2.26845, 0.473573)
+
+[node name="grass-cube-new16" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(0.0550969, -0.0550969, 0.579409, 0.212132, 0.212132, 0, -0.204852, 0.204852, 0.155837, 1.18994, 2.28123, 0.863052)
+
+[node name="grass-cube-new17" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-1.48361e-08, 1.48361e-08, 0.6, 0.339411, 0.339411, 0, -0.339411, 0.339411, -2.62268e-08, 1.19121, 2.22112, -0.636672)
+
+[node name="grass-cube-new18" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-1.48361e-08, 1.48361e-08, 0.6, 0.339411, 0.339411, 0, -0.339411, 0.339411, -2.62268e-08, 1.19216, 2.26845, -0.886494)
+
+[node name="grass-cube-new19" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-0.18, 0.18, 0.424264, 0.254558, 0.254558, 0, -0.18, 0.18, -0.424264, 1.00364, 2.26845, -1.1811)
+
+[node name="grass-cube-new20" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-1.85452e-08, 1.85452e-08, 0.6, 0.424264, 0.424264, 0, -0.424264, 0.424264, -2.62268e-08, 1.19249, 2.10892, 0.070704)
+
+[node name="grass-cube-new21" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-1.85452e-08, 1.85452e-08, 0.6, 0.424264, 0.424264, 0, -0.424264, 0.424264, -2.62268e-08, 1.1928, 2.1558, -0.3216)
+
+[node name="grass-cube-new22" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-0.339411, 0.339411, -5.24537e-08, 0.339411, 0.339411, 0, 2.96723e-08, -2.96723e-08, -0.6, 0.473573, 2.26845, -1.19402)
+
+[node name="grass-cube-new23" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-0.204852, 0.204852, 0.155837, 0.212132, 0.212132, 0, -0.0550969, 0.0550969, -0.579409, 0.863052, 2.28123, -1.18994)
+
+[node name="grass-cube-new24" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-0.339411, 0.339411, -5.24537e-08, 0.339411, 0.339411, 0, 2.96723e-08, -2.96723e-08, -0.6, -0.636672, 2.22112, -1.19121)
+
+[node name="grass-cube-new25" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-0.339411, 0.339411, -5.24537e-08, 0.339411, 0.339411, 0, 2.96723e-08, -2.96723e-08, -0.6, -0.886494, 2.26845, -1.19216)
+
+[node name="grass-cube-new26" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-0.18, 0.18, -0.424264, 0.254558, 0.254558, 0, 0.18, -0.18, -0.424264, -1.1811, 2.26845, -1.00364)
+
+[node name="grass-cube-new27" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-0.424264, 0.424264, -5.24537e-08, 0.424264, 0.424264, 0, 3.70903e-08, -3.70903e-08, -0.6, 0.070704, 2.10892, -1.19249)
+
+[node name="grass-cube-new28" parent="." instance=ExtResource("3_lym55")]
+transform = Transform3D(-0.424264, 0.424264, -5.24537e-08, 0.424264, 0.424264, 0, 3.70903e-08, -3.70903e-08, -0.6, -0.32138, 2.15567, -1.19249)

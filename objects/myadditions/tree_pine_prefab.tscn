@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ec04ayb53gv8"]
+
+[ext_resource type="PackedScene" uid="uid://d2veqbfgvsag0" path="res://models/props/tree-pine.glb" id="1_t8ksw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h8upa"]
+radius = 0.25103
+height = 1.55085
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sd00i"]
+radius = 0.0491916
+height = 1.02799
+
+[node name="tree-pine-prefab" instance=ExtResource("1_t8ksw")]
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.777443, 0)
+shape = SubResource("CapsuleShape3D_h8upa")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42407, 0)
+shape = SubResource("CapsuleShape3D_sd00i")

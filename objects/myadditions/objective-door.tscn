@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxhmtnxougfni"]
+
+[ext_resource type="PackedScene" uid="uid://ctsyh8fjntx7y" path="res://models/props/door-rotate-large.glb" id="1_qinm4"]
+[ext_resource type="Script" path="res://scripts/door.gd" id="2_yvg45"]
+[ext_resource type="PackedScene" uid="uid://dqe83pil81wbx" path="res://objects/dither_obstacle.tscn" id="3_krjs1"]
+[ext_resource type="Texture2D" uid="uid://b3dcegptytkk4" path="res://models/props/Textures/new_colormap.png" id="3_w1x2f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_utvwg"]
+albedo_texture = ExtResource("3_w1x2f")
+uv1_offset = Vector3(0.9, -1.765, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rqlf3"]
+albedo_texture = ExtResource("3_w1x2f")
+uv1_offset = Vector3(-0.225, 0.43, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2844u"]
+size = Vector3(2, 2, 0.5)
+
+[node name="door" groups=["Door"] instance=ExtResource("1_qinm4")]
+process_mode = 3
+script = ExtResource("2_yvg45")
+
+[node name="DitherObstacle" parent="." index="0" instance=ExtResource("3_krjs1")]
+
+[node name="door-rotate-large" parent="." index="1"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_utvwg")
+
+[node name="door" parent="door-rotate-large" index="0"]
+transform = Transform3D(1, 0, -3.87541e-16, 0, 1, 0, 3.87541e-16, 0, 1, -0.3, 3.53243e-18, -2.38418e-08)
+surface_material_override/0 = SubResource("StandardMaterial3D_rqlf3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_2844u")

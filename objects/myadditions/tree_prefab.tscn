@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cen8mramwsi6o"]
+
+[ext_resource type="PackedScene" uid="uid://dlst3fxcqusuq" path="res://models/props/tree.glb" id="1_1eeog"]
+[ext_resource type="PackedScene" uid="uid://dqe83pil81wbx" path="res://objects/dither_obstacle.tscn" id="2_fkwt4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gw6xg"]
+radius = 0.279237
+height = 1.87842
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8q23s"]
+size = Vector3(0.696091, 0.934593, 0.692305)
+
+[node name="tree-prefab" instance=ExtResource("1_1eeog")]
+
+[node name="DitherObstacle" parent="tree" index="0" instance=ExtResource("2_fkwt4")]
+min_distance_dither = 0.0
+max_distance_dither = 10.0
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.93933, 0)
+shape = SubResource("CapsuleShape3D_gw6xg")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000358582, 1.37036, 0.000445366)
+shape = SubResource("BoxShape3D_8q23s")
+
+[node name="DitherObstacle2" parent="." index="2" instance=ExtResource("2_fkwt4")]
+min_distance_dither = 0.0
+max_distance_dither = 10.0
