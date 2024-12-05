@@ -20,6 +20,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ve8if")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="cube2" index="0"]
 physics_material_override = SubResource("PhysicsMaterial_ict2h")
+sync_to_physics = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cube2/AnimatableBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_muwsy")

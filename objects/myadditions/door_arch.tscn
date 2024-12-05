@@ -78,6 +78,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_iulpv")
 [node name="DitherObstacle" parent="door-large-open" instance=ExtResource("1_ro1s3")]
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
+sync_to_physics = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, -0.212603, 0)

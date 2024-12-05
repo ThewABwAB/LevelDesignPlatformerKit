@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bshy222lwr7ra"]
 
 [ext_resource type="PackedScene" uid="uid://dany02f014xwk" path="res://objects/myadditions/grass_cube_better.tscn" id="1_n6yne"]
-[ext_resource type="PackedScene" uid="uid://t5mn3rn1i8m8" path="res://objects/myadditions/rock-cube.tscn" id="2_oqy42"]
+[ext_resource type="PackedScene" uid="uid://t5mn3rn1i8m8" path="res://objects/myadditions/rock_cube.tscn" id="2_oqy42"]
 [ext_resource type="PackedScene" uid="uid://by1jl0m0dpmbq" path="res://objects/myadditions/grass_cube_new.tscn" id="3_lym55"]
 
 [node name="moving-grass-rock" type="Node3D"]

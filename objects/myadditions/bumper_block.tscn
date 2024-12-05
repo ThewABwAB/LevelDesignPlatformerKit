@@ -22,6 +22,7 @@ shape = SubResource("BoxShape3D_w0216")
 transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, -0.503568, 0)
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="." index="2"]
+sync_to_physics = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" index="0"]
 transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, -0.254178, 0)

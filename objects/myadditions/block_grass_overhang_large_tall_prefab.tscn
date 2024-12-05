@@ -7,8 +7,9 @@ size = Vector3(2.00008, 2.00024, 1.99893)
 
 [node name="block-grass-overhang-large-tall-prefab" instance=ExtResource("1_exn37")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." index="1"]
+sync_to_physics = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000433922, 0.999878, -0.000143051)
 shape = SubResource("BoxShape3D_4g0tc")
