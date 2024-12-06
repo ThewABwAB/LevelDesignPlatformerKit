@@ -1,5 +1,6 @@
 extends Node3D
 @export var target : Node3D
+@export var target2 : Node3D
 @export var pressed_by_default : bool
 @export var press_is_permanent : bool
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -14,6 +15,8 @@ func _ready() -> void:
 	
 		if target and target.has_method("receive_input"):
 			target.receive_input(button_state)
+		if target2 and target2.has_method("receive_input"):
+			target2.receive_input(button_state)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -32,3 +35,5 @@ func _on_button_area_3d_area_entered(_area: Area3D) -> void:
 			
 			if target and target.has_method("receive_input"):
 				target.receive_input(button_state)
+			if target2 and target2.has_method("receive_input"):
+				target2.receive_input(button_state)
