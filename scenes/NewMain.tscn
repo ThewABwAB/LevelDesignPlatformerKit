@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://d21gggre4fbqb" path="res://objects/myadditions/grass_rock_very_rounded_cube_prefab.tscn" id="20_blqyb"]
 [ext_resource type="PackedScene" uid="uid://kxlanit681hg" path="res://models/props/platform.glb" id="21_1gaod"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="22_1axdd"]
-[ext_resource type="PackedScene" uid="uid://dd36dhs2niiau" path="res://objects/myadditions/grass_hexagon.tscn" id="22_7e5sl"]
+[ext_resource type="PackedScene" uid="uid://dd36dhs2niiau" path="res://objects/myadditions/Hexagons/grass_hexagon.tscn" id="22_7e5sl"]
 [ext_resource type="PackedScene" uid="uid://3yuxff1xl0x2" path="res://models/props/platform-ramp.glb" id="22_cuc4x"]
 [ext_resource type="PackedScene" uid="uid://dr8u01l137xpd" path="res://objects/myadditions/spiked_blunt_weapon.tscn" id="23_1ln12"]
 [ext_resource type="PackedScene" uid="uid://bpharv43ulngb" path="res://objects/platform_moving.tscn" id="23_7hryr"]
@@ -658,7 +658,7 @@ transform = Transform3D(-0.513077, 0, 0.858343, 0, 1, 0, -0.858343, 0, -0.513077
 transform = Transform3D(-0.513077, 0, 0.858343, 0, 1, 0, -0.858343, 0, -0.513077, 25.5407, 3.93212, 21.7577)
 
 [node name="flower_falling17" parent="World/linking-island/falling-flowers" instance=ExtResource("29_f1n7o")]
-transform = Transform3D(-0.0151664, 0, 0.999885, 0, 1, 0, -0.999885, 0, -0.0151664, 21.7715, 2.58717, 20.0542)
+transform = Transform3D(-0.0151663, 0, 0.999885, 0, 1, 0, -0.999885, 0, -0.0151663, 21.7715, 2.58717, 20.0542)
 
 [node name="flower_falling9" parent="World/linking-island/falling-flowers" instance=ExtResource("29_f1n7o")]
 transform = Transform3D(0.938282, 0, 0.345872, 0, 1, 0, -0.345872, 0, 0.938282, 9.12454, 12.1551, 25.9044)

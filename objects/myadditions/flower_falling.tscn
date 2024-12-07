@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://b44hwv6u2apqs"]
+[gd_scene load_steps=17 format=4 uid="uid://b44hwv6u2apqs"]
 
 [ext_resource type="PackedScene" uid="uid://dqe83pil81wbx" path="res://objects/dither_obstacle.tscn" id="1_kmfeu"]
 [ext_resource type="Script" path="res://objects/myadditions/platform_falling_new.gd" id="1_nji7e"]
@@ -108,6 +108,68 @@ _data = {
 "respawn": SubResource("Animation_4ywbb")
 }
 
+[sub_resource type="Animation" id="Animation_7ve4a"]
+resource_name = "flower_rotation"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("platform-falling2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("platform-falling2#StaticBody3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2nyun"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("platform-falling2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("platform-falling2#StaticBody3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gqo7i"]
+_data = {
+"RESET": SubResource("Animation_2nyun"),
+"flower_rotation": SubResource("Animation_7ve4a")
+}
+
 [node name="flower_falling" type="Node3D"]
 script = ExtResource("1_nji7e")
 
@@ -140,5 +202,11 @@ shape = SubResource("BoxShape3D_rny0r")
 libraries = {
 "": SubResource("AnimationLibrary_mmy7m")
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gqo7i")
+}
+autoplay = "flower_rotation"
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_body_entered"]
