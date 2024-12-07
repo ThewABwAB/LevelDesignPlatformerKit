@@ -23,7 +23,7 @@ func _on_button_area_3d_area_entered(_area: Area3D) -> void:
 	if cooldown_timer.is_stopped():
 		cooldown_timer.start()
 		if not animation_player.is_playing():
-			if button_state and !press_is_permanent:
+			if button_state and not press_is_permanent:
 				button_state = false
 				animation_player.play("toggle-off")
 			else:

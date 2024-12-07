@@ -1,13 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://blo30bgy1m18c"]
+[gd_scene load_steps=4 format=3 uid="uid://blo30bgy1m18c"]
 
 [ext_resource type="PackedScene" uid="uid://v7114fdp2q8g" path="res://models/props/block-grass-low-hexagon.glb" id="1_c6pq1"]
+[ext_resource type="PackedScene" uid="uid://dqe83pil81wbx" path="res://objects/dither_obstacle.tscn" id="2_ag7ho"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d3b0w"]
 size = Vector3(1, 0.500977, 0.577866)
 
 [node name="block-grass-low-hexagon-prefab" instance=ExtResource("1_c6pq1")]
 
-[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." index="1"]
+[node name="DitherObstacle" parent="." index="1" instance=ExtResource("2_ag7ho")]
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." index="2"]
 sync_to_physics = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" index="0"]

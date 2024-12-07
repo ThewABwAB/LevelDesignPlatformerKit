@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cj2o25a7mcceg"]
+[gd_scene load_steps=6 format=3 uid="uid://cj2o25a7mcceg"]
 
 [ext_resource type="PackedScene" uid="uid://dhl7cyb0eqgnn" path="res://models/prototyping/models/shape-hexagon.glb" id="1_dhdhe"]
 [ext_resource type="Texture2D" uid="uid://72ldk18ropuj" path="res://models/props/Textures/colormap.png" id="2_0jha6"]
+[ext_resource type="PackedScene" uid="uid://dqe83pil81wbx" path="res://objects/dither_obstacle.tscn" id="3_xqr3e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rfsb"]
 albedo_texture = ExtResource("2_0jha6")
@@ -16,7 +17,10 @@ size = Vector3(1, 1, 0.576477)
 transform = Transform3D(1.155, 0, 0, 0, 1, 0, 0, 0, 1.155, 0, 0, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_5rfsb")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+[node name="DitherObstacle" parent="." index="1" instance=ExtResource("3_xqr3e")]
+max_distance_dither = 9.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.000274658)
