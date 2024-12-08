@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://dexxweq8e64nx"]
+[gd_scene load_steps=77 format=3 uid="uid://dexxweq8e64nx"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ymoxt"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_4idm0"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://bs2q22oxxd5wj" path="res://objects/myadditions/Hexagons/shape_hexagon_recolord_prefab_sized.tscn" id="13_udb0w"]
 [ext_resource type="PackedScene" uid="uid://gqufwiffi8ay" path="res://models/prototyping/models/shape-hollow-hexagon.glb" id="14_b57dt"]
 [ext_resource type="PackedScene" uid="uid://cxea8lmw7cy1l" path="res://objects/player_kill_volume.tscn" id="14_iondl"]
-[ext_resource type="PackedScene" uid="uid://bqiivlegiim7o" path="res://objects/myadditions/grass_cube.tscn" id="14_yq32t"]
 [ext_resource type="PackedScene" uid="uid://cyvet7kb6y80r" path="res://objects/checkpoint.tscn" id="15_1p00s"]
 [ext_resource type="PackedScene" uid="uid://8k7snglm6hxy" path="res://objects/myadditions/Hexagons/massive_grass_hexagon.tscn" id="16_53e0c"]
 [ext_resource type="PackedScene" uid="uid://cj2o25a7mcceg" path="res://objects/myadditions/Hexagons/shape_hexagon_prefab_sized.tscn" id="17_ntwrg"]
@@ -28,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="23_ngj6c"]
 [ext_resource type="PackedScene" uid="uid://g73m8k0j7lyo" path="res://objects/button.tscn" id="24_5ibya"]
 [ext_resource type="PackedScene" uid="uid://dfiytyix2nkve" path="res://objects/myadditions/button_two.tscn" id="24_b1a0o"]
+[ext_resource type="PackedScene" uid="uid://cxajuuoc6jd61" path="res://objects/myadditions/last-door.tscn" id="24_g3fvm"]
 [ext_resource type="PackedScene" uid="uid://bw7nsi1v8g30s" path="res://models/props/poles.glb" id="24_jncmx"]
 [ext_resource type="LabelSettings" uid="uid://daohhjonjrdx8" path="res://themes/label_settings.tres" id="24_phqxj"]
 [ext_resource type="PackedScene" uid="uid://d1g0ggyl0wuyc" path="res://objects/myadditions/center_down_up.tscn" id="25_fgxyf"]
@@ -35,6 +35,7 @@
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="25_qa81d"]
 [ext_resource type="PackedScene" uid="uid://blqf5cwsk25xj" path="res://models/core_models/grass.glb" id="26_2r17i"]
 [ext_resource type="Theme" uid="uid://d3avl0mr4r87l" path="res://themes/default_theme.tres" id="26_ajf2g"]
+[ext_resource type="PackedScene" uid="uid://ci4xdo7rb85a8" path="res://models/prototyping/models/number-8.glb" id="26_iar8i"]
 [ext_resource type="PackedScene" uid="uid://cuwrpexkcyn2r" path="res://objects/myadditions/center_up_down.tscn" id="26_knn25"]
 [ext_resource type="PackedScene" uid="uid://bddgf7n531bdn" path="res://models/props/fence-low-straight.glb" id="26_vjs0e"]
 [ext_resource type="Texture2D" uid="uid://dm50aa4qogm65" path="res://sprites/button_rectangle_depth_gloss.png" id="27_iv170"]
@@ -57,13 +58,16 @@
 [ext_resource type="PackedScene" uid="uid://iabq457ap6ms" path="res://models/prototyping/models/number-3.glb" id="34_58jtv"]
 [ext_resource type="PackedScene" uid="uid://bi4xksiew5tkr" path="res://objects/myadditions/tree_prefab_new.tscn" id="34_wsr4r"]
 [ext_resource type="PackedScene" uid="uid://t5mn3rn1i8m8" path="res://objects/myadditions/rock_cube.tscn" id="35_3b0ox"]
-[ext_resource type="PackedScene" uid="uid://7r4keugqqlem" path="res://objects/myadditions/arch.tscn" id="36_4jkdp"]
 [ext_resource type="PackedScene" uid="uid://i61vqvc3gm75" path="res://objects/flag_new.tscn" id="37_75r8c"]
 [ext_resource type="PackedScene" uid="uid://dq8fcf15yrnqh" path="res://models/prototyping/models/number-6.glb" id="39_7rsjd"]
+[ext_resource type="PackedScene" uid="uid://cfln4ci80ya2k" path="res://models/prototyping/models/number-7.glb" id="39_2730h"]
+[ext_resource type="PackedScene" uid="uid://cur38vrk0c3sg" path="res://models/prototyping/models/number-1.glb" id="40_30don"]
 [ext_resource type="PackedScene" uid="uid://by1jl0m0dpmbq" path="res://objects/myadditions/grass_cube_new.tscn" id="40_cd5k1"]
 [ext_resource type="PackedScene" uid="uid://bw8h71jgw2ycu" path="res://objects/myadditions/cloud_new.tscn" id="47_cdxbp"]
 [ext_resource type="PackedScene" uid="uid://cin4l66d5bp1m" path="res://objects/myadditions/bouncy_cloud.tscn" id="62_yiq7n"]
 [ext_resource type="PackedScene" uid="uid://dgrptcrc8uysu" path="res://objects/myadditions/group_of_clouds.tscn" id="63_hqv3i"]
+[ext_resource type="PackedScene" uid="uid://hc1sf251ka82" path="res://objects/myadditions/Dark_versions/dark_rock_cube.tscn" id="65_p7sva"]
+[ext_resource type="PackedScene" uid="uid://b1bhybw7d10a3" path="res://objects/myadditions/Dark_versions/dark_spike_damage.tscn" id="67_6w8ga"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_u8ojw"]
 auto_exposure_scale = 0.75
@@ -123,7 +127,7 @@ environment = ExtResource("1_ymoxt")
 camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
 
 [node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_4idm0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6153, 3.73409, 6.56093)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.14746, 3.41912, 7.09471)
 view = NodePath("../View")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
@@ -333,12 +337,23 @@ transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -4.580
 transform = Transform3D(-4.55529, -1.315, -2.27765, 0, 4.55529, -2.63, 2.63, -2.27765, -3.945, 5.30742, -0.162787, 6.8057)
 
 [node name="grass-rock-very-rounded-cube10" parent="World/starting-island" instance=ExtResource("20_blqyb")]
-transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, -5.31966, -1.6952, 4.76965)
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, -6.31184, -1.6952, 5.28977)
 
-[node name="arch" parent="World/starting-island" instance=ExtResource("36_4jkdp")]
-transform = Transform3D(-0.991786, 0, 1.62061, 0, 1.9, 0, -1.62061, 0, -0.991786, -6.34795, 3.18547, 5.36492)
+[node name="last-door" parent="World/starting-island" instance=ExtResource("24_g3fvm")]
+transform = Transform3D(-1.64751, 0, -0.946437, 0, 1.9, 0, 0.946437, 0, -1.64751, -5.59323, 3.18547, 6.47232)
+look_at_door_when_opens = true
+open_door_with_coins = 18
 
-[node name="door-arch" parent="World/starting-island/arch" instance=ExtResource("33_cb75n")]
+[node name="door-arch" parent="World/starting-island/last-door" instance=ExtResource("33_cb75n")]
+
+[node name="flag" parent="World/starting-island/last-door" instance=ExtResource("37_75r8c")]
+transform = Transform3D(-2.98023e-08, 0, 0.526313, 0, 0.526315, 0, -0.526313, 0, -2.98023e-08, 0, 0, 0)
+
+[node name="number-eight" parent="World/starting-island/last-door" instance=ExtResource("26_iar8i")]
+transform = Transform3D(0, 0, 0.667, 0, 0.667, 0, -0.667, 0, 0, 1.03736, 0.552877, 0.531841)
+
+[node name="number-one" parent="World/starting-island/last-door" instance=ExtResource("40_30don")]
+transform = Transform3D(-2.98023e-08, 0, 0.667, 0, 0.667, 0, -0.667, 0, -2.98023e-08, 0.837332, 0.553274, 0.532169)
 
 [node name="grass" parent="World/starting-island" instance=ExtResource("26_2r17i")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1.5, 0, -8.74228e-08, 0, -1, -5.18036, 4.7005, -1.43494)
@@ -1093,16 +1108,24 @@ transform = Transform3D(-0.0117687, 0, 0.666896, 0, 0.667, 0, -0.666896, 0, -0.0
 [node name="door2" parent="World" instance=ExtResource("32_is3c5")]
 transform = Transform3D(-0.693914, 0, -2.91864, 0, 3, 0, 2.91864, 0, -0.693914, 34.9824, 34.6616, 12.6858)
 look_at_door_when_opens = true
-open_door_with_coins = 33
+open_door_with_coins = 17
 metadata/_edit_group_ = true
+
+[node name="number-seven" parent="World/door2" instance=ExtResource("39_2730h")]
+transform = Transform3D(-2.98023e-08, 0, 0.667, 0, 0.667, 0, -0.667, 0, -2.98023e-08, 1.04335, 0.552876, 0.525476)
+
+[node name="number-one" parent="World/door2" instance=ExtResource("40_30don")]
+transform = Transform3D(-2.98023e-08, 0, 0.667, 0, 0.667, 0, -0.667, 0, -2.98023e-08, 0.843324, 0.553273, 0.525805)
 
 [node name="door-arch" parent="World/door2" instance=ExtResource("33_cb75n")]
 
 [node name="number-33-1" parent="World/door2" instance=ExtResource("34_58jtv")]
 transform = Transform3D(0.0200898, 0, 0.605575, 0, 0.605909, 0, -0.605575, 0, 0.0200898, 0.840753, 0.574228, 0.460785)
+visible = false
 
 [node name="number-33-2" parent="World/door2" instance=ExtResource("34_58jtv")]
 transform = Transform3D(0.0200898, 0, 0.605575, 0, 0.605909, 0, -0.605575, 0, 0.0200898, 1.05627, 0.574228, 0.46739)
+visible = false
 
 [node name="door3" parent="World" instance=ExtResource("32_is3c5")]
 transform = Transform3D(0.532542, 0, -2.95235, 0, 3, 0, 2.95235, 0, 0.532542, 35.9845, 32.1859, 0.00137395)
@@ -1112,8 +1135,11 @@ metadata/_edit_group_ = true
 
 [node name="door-arch" parent="World/door3" instance=ExtResource("33_cb75n")]
 
-[node name="flag" parent="World/door3" instance=ExtResource("37_75r8c")]
-transform = Transform3D(-0.0183053, 0, 0.33283, 0, 0.333333, 0, -0.33283, 0, -0.0183053, 0, 0, 0)
+[node name="number-six" parent="World/door3" instance=ExtResource("39_7rsjd")]
+transform = Transform3D(-2.98023e-08, 0, 0.667, 0, 0.667, 0, -0.667, 0, -2.98023e-08, 1.03736, 0.552877, 0.53184)
+
+[node name="number-one" parent="World/door3" instance=ExtResource("40_30don")]
+transform = Transform3D(-2.98023e-08, 0, 0.667, 0, 0.667, 0, -0.667, 0, -2.98023e-08, 0.837332, 0.553274, 0.532169)
 
 [node name="floating-island-dubble" type="Node3D" parent="World"]
 transform = Transform3D(0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866026, 2.48479, 10.5708, 25.9117)
@@ -1312,165 +1338,6 @@ transform = Transform3D(-3.985, -3.29171e-07, 0, 6.01718e-07, -2.18, 0, 0, 0, 3.
 [node name="floating-island-levels2" type="Node3D" parent="World"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.309, 1.30835, -78.1615)
 
-[node name="grass" type="Node3D" parent="World/floating-island-levels2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15, 6, 1.271)
-
-[node name="grass-cube" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, -0.866026, -5.19118e-14, 0.5, 0, 0.866026, 2.24785e-14, -0.5, 0.104076, 0.0729418, -4.51307)
-
-[node name="grass-cube2" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.866026, -1.29779e-14, -0.5, -4.49569e-14, 0.5, 2.59559e-14, 0.5, 2.24785e-14, -0.866026, -0.121353, 0.0729418, -4.51328)
-
-[node name="grass-cube3" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.866026, -1.29779e-14, -0.5, -4.49569e-14, 0.5, 2.59559e-14, 0.5, 2.24785e-14, -0.866026, -0.643589, 0.0729418, -4.20944)
-
-[node name="grass-cube4" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.866026, -1.29779e-14, -0.5, -4.49569e-14, 0.5, 2.59559e-14, 0.5, 2.24785e-14, -0.866026, -1.16764, 0.0729418, -3.90526)
-
-[node name="grass-cube7" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.866026, -1.29779e-14, -0.5, -4.49569e-14, 0.5, 2.59559e-14, 0.5, 2.24785e-14, -0.866026, -2.73929, 0.0729418, -2.99364)
-
-[node name="grass-cube8" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.866026, -1.29779e-14, -0.5, -4.49569e-14, 0.5, 2.59559e-14, 0.5, 2.24785e-14, -0.866026, -3.26151, 0.0729418, -2.69263)
-
-[node name="grass-cube9" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.866026, -1.29779e-14, -0.5, -4.49569e-14, 0.5, 2.59559e-14, 0.5, 2.24785e-14, -0.866026, -3.78015, 0.0729418, -2.39259)
-
-[node name="grass-cube10" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.866026, -1.29779e-14, -0.5, -4.49569e-14, 0.5, 2.59559e-14, 0.5, 2.24785e-14, -0.866026, -3.83623, 0.0729418, -2.36146)
-
-[node name="grass-cube11" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, -0.866026, -5.19118e-14, 0.5, 0, 0.866026, 2.24785e-14, -0.5, 0.617996, 0.0729418, -4.21636)
-
-[node name="grass-cube12" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, -0.866026, -5.19118e-14, 0.5, 0, 0.866026, 2.24785e-14, -0.5, 1.142, 0.0729418, -3.91383)
-
-[node name="grass-cube13" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, -0.866026, -5.19118e-14, 0.5, 0, 0.866026, 2.24785e-14, -0.5, 1.6617, 0.0729418, -3.61378)
-
-[node name="grass-cube14" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, -0.866026, -5.19118e-14, 0.5, 0, 0.866026, 2.24785e-14, -0.5, 2.18214, 0.0729418, -3.3133)
-
-[node name="grass-cube15" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, -0.866026, -5.19118e-14, 0.5, 0, 0.866026, 2.24785e-14, -0.5, 2.6979, 0.0729418, -3.01553)
-
-[node name="grass-cube16" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, -0.866026, -5.19118e-14, 0.5, 0, 0.866026, 2.24785e-14, -0.5, 3.216, 0.0729418, -2.7164)
-
-[node name="grass-cube17" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, -0.866026, -5.19118e-14, 0.5, 0, 0.866026, 2.24785e-14, -0.5, 3.73644, 0.0729418, -2.41593)
-
-[node name="grass-cube18" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, -0.866026, -5.19118e-14, 0.5, 0, 0.866026, 2.24785e-14, -0.5, 3.85484, 0.0729418, -2.35126)
-
-[node name="grass-cube19" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(1, 1.69407e-21, 0, 0, 0.5, 0, 0, 0, 1, -3.96047, 0.0729418, 2.1664)
-
-[node name="grass-cube20" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(0.866026, 1.69407e-21, -0.5, 3.38813e-21, 0.5, 0, 0.5, 0, 0.866026, -3.84794, 0.0729418, 2.36174)
-
-[node name="grass-cube21" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(0.866026, 1.69407e-21, -0.5, 3.38813e-21, 0.5, 0, 0.5, 0, 0.866026, -3.32369, 0.0729418, 2.66209)
-
-[node name="grass-cube22" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(0.866026, 1.69407e-21, -0.5, 3.38813e-21, 0.5, 0, 0.5, 0, 0.866026, -2.79823, 0.0729418, 2.96384)
-
-[node name="grass-cube23" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(0.866026, 1.69407e-21, -0.5, 3.38813e-21, 0.5, 0, 0.5, 0, 0.866026, -2.27278, 0.0729418, 3.2656)
-
-[node name="grass-cube24" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(0.866026, 1.69407e-21, -0.5, 3.38813e-21, 0.5, 0, 0.5, 0, 0.866026, -1.74837, 0.0729418, 3.56683)
-
-[node name="grass-cube25" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(0.866026, 1.69407e-21, -0.5, 3.38813e-21, 0.5, 0, 0.5, 0, 0.866026, -1.22292, 0.0729418, 3.86911)
-
-[node name="grass-cube26" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(0.866026, 1.69407e-21, -0.5, 3.38813e-21, 0.5, 0, 0.5, 0, 0.866026, -0.701138, 0.0729418, 4.17086)
-
-[node name="grass-cube27" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(0.866026, 1.69407e-21, -0.5, 3.38813e-21, 0.5, 0, 0.5, 0, 0.866026, -0.181976, 0.0729418, 4.47)
-
-[node name="grass-cube28" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(0.866026, 1.69407e-21, -0.5, 3.38813e-21, 0.5, 0, 0.5, 0, 0.866026, -0.126972, 0.0729418, 4.503)
-
-[node name="grass-cube29" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(1, 3.38813e-21, 0, 0, 0.5, 0, 0, 0, 1, -3.96047, 0.0729418, 1.57298)
-
-[node name="grass-cube30" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(1, 3.38813e-21, 0, 0, 0.5, 0, 0, 0, 1, -3.96047, 0.0729418, 0.967915)
-
-[node name="grass-cube31" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(1, 3.38813e-21, 0, 0, 0.5, 0, 0, 0, 1, -3.96047, 0.0729418, 0.367813)
-
-[node name="grass-cube32" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(1, 3.38813e-21, 0, 0, 0.5, 0, 0, 0, 1, -3.96047, 0.0729418, -0.233131)
-
-[node name="grass-cube33" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(1, 3.38813e-21, 0, 0, 0.5, 0, 0, 0, 1, -3.96047, 0.0729418, -0.82869)
-
-[node name="grass-cube34" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(1, 3.38813e-21, 0, 0, 0.5, 0, 0, 0, 1, -3.96047, 0.0729418, -1.42694)
-
-[node name="grass-cube35" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(1, 3.38813e-21, 0, 0, 0.5, 0, 0, 0, 1, -3.96047, 0.0729418, -2.02789)
-
-[node name="grass-cube36" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(1, 3.38813e-21, 0, 0, 0.5, 0, 0, 0, 1, -3.96113, 0.0729418, -2.15964)
-
-[node name="grass-cube37" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, 0.866026, -5.19118e-14, 0.5, 0, -0.866026, -2.24785e-14, -0.5, 3.8564, 0.0729418, 2.34667)
-
-[node name="grass-cube38" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-5.96047e-08, -1.29779e-14, 1, -4.49569e-14, 0.5, 2.59559e-14, -1, -2.24785e-14, -5.96047e-08, 3.9693, 0.0729418, 2.15154)
-
-[node name="grass-cube39" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-5.96047e-08, -1.29779e-14, 1, -4.49569e-14, 0.5, 2.59559e-14, -1, -2.24785e-14, -5.96047e-08, 3.96728, 0.0729418, 1.54736)
-
-[node name="grass-cube40" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-5.96047e-08, -1.29779e-14, 1, -4.49569e-14, 0.5, 2.59559e-14, -1, -2.24785e-14, -5.96047e-08, 3.96588, 0.0729418, 0.941422)
-
-[node name="grass-cube41" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-5.96047e-08, -1.29779e-14, 1, -4.49569e-14, 0.5, 2.59559e-14, -1, -2.24785e-14, -5.96047e-08, 3.96447, 0.0729418, 0.335484)
-
-[node name="grass-cube42" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-5.96047e-08, -1.29779e-14, 1, -4.49569e-14, 0.5, 2.59559e-14, -1, -2.24785e-14, -5.96047e-08, 3.96315, 0.0729418, -0.269276)
-
-[node name="grass-cube43" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-5.96047e-08, -1.29779e-14, 1, -4.49569e-14, 0.5, 2.59559e-14, -1, -2.24785e-14, -5.96047e-08, 3.96221, 0.0729418, -0.875473)
-
-[node name="grass-cube44" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-5.96047e-08, -1.29779e-14, 1, -4.49569e-14, 0.5, 2.59559e-14, -1, -2.24785e-14, -5.96047e-08, 3.96264, 0.0729418, -1.47823)
-
-[node name="grass-cube45" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-5.96047e-08, -1.29779e-14, 1, -4.49569e-14, 0.5, 2.59559e-14, -1, -2.24785e-14, -5.96047e-08, 3.96212, 0.0729418, -2.07741)
-
-[node name="grass-cube46" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-5.96047e-08, -1.29779e-14, 1, -4.49569e-14, 0.5, 2.59559e-14, -1, -2.24785e-14, -5.96047e-08, 3.9632, 0.0729418, -2.14154)
-
-[node name="grass-cube47" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, 0.866026, -5.19118e-14, 0.5, 0, -0.866026, -2.24785e-14, -0.5, 3.34248, 0.0729418, 2.64338)
-
-[node name="grass-cube48" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, 0.866026, -5.19118e-14, 0.5, 0, -0.866026, -2.24785e-14, -0.5, 2.81848, 0.0729418, 2.94591)
-
-[node name="grass-cube49" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, 0.866026, -5.19118e-14, 0.5, 0, -0.866026, -2.24785e-14, -0.5, 2.29877, 0.0729418, 3.24596)
-
-[node name="grass-cube50" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, 0.866026, -5.19118e-14, 0.5, 0, -0.866026, -2.24785e-14, -0.5, 1.77834, 0.0729418, 3.54644)
-
-[node name="grass-cube51" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, 0.866026, -5.19118e-14, 0.5, 0, -0.866026, -2.24785e-14, -0.5, 1.26257, 0.0729418, 3.84422)
-
-[node name="grass-cube52" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, 0.866026, -5.19118e-14, 0.5, 0, -0.866026, -2.24785e-14, -0.5, 0.744465, 0.0729418, 4.14334)
-
-[node name="grass-cube53" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, 0.866026, -5.19118e-14, 0.5, 0, -0.866026, -2.24785e-14, -0.5, 0.224037, 0.0729418, 4.44381)
-
-[node name="grass-cube54" parent="World/floating-island-levels2/grass" instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.5, -1.29779e-14, 0.866026, -5.19118e-14, 0.5, 0, -0.866026, -2.24785e-14, -0.5, 0.108829, 0.0729418, 4.51402)
-
 [node name="shape-hexagon-dirt" parent="World/floating-island-levels2" instance=ExtResource("13_udb0w")]
 transform = Transform3D(8.76, 0, 0, 0, 0.5, 0, 0, 0, 8.76, 2.15, 6, 1.271)
 
@@ -1520,7 +1387,7 @@ transform = Transform3D(-0.710456, 0, -0.703742, 0, 1, 0, 0.703742, 0, -0.710456
 transform = Transform3D(-0.990102, 0, 0.140347, 0, 1, 0, -0.140347, 0, -0.990102, 58.7319, 7.17187, -91.2355)
 
 [node name="greatsword" parent="World" instance=ExtResource("29_xq255")]
-transform = Transform3D(0.0167544, -0.98467, -0.173624, 0, 0.173648, -0.984808, 0.99986, 0.0164999, 0.00290937, 37.5953, 19.375, -34.002)
+transform = Transform3D(0.0167544, -0.98467, -0.173624, 0, 0.173648, -0.984808, 0.99986, 0.0164999, 0.00290937, 28.7816, 34.1407, 7.12684)
 
 [node name="checkpoint2" parent="World" instance=ExtResource("15_1p00s")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10.7682, 36.6411, 13.3525)
@@ -1570,12 +1437,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.843, 7.80835, -78.006)
 [node name="crate2" parent="." instance=ExtResource("33_lhhm8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.4509, 7.80835, -78.3638)
 
-[node name="grass-cube5" parent="." instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.866026, -1.29779e-14, -0.5, -4.49569e-14, 0.5, 2.59559e-14, 0.5, 2.24785e-14, -0.866026, 38.7673, 7.38129, -80.4916)
-
-[node name="grass-cube6" parent="." instance=ExtResource("14_yq32t")]
-transform = Transform3D(-0.866026, -1.29779e-14, -0.5, -4.49569e-14, 0.5, 2.59559e-14, 0.5, 2.24785e-14, -0.866026, 38.2442, 7.38129, -80.188)
-
 [node name="coin" parent="." instance=ExtResource("29_dag5v")]
 transform = Transform3D(1.73205, 0, 1.6, 0, 3.2, 0, -1, 0, 2.77128, -6.94663, 7.8053, -1.17825)
 
@@ -1584,6 +1445,33 @@ transform = Transform3D(0.0497039, 0, -0.998764, 0, 1, 0, 0.998764, 0, 0.0497039
 
 [node name="group-of-clouds" parent="." instance=ExtResource("63_hqv3i")]
 transform = Transform3D(0.0497039, 0, -0.998764, 0, 1, 0, 0.998764, 0, 0.0497039, 44.52, 27.9406, -3.58402)
+
+[node name="Enterance-to-darkness" type="Node3D" parent="."]
+transform = Transform3D(0.509687, 0, 0.86036, 0, 1, 0, -0.86036, 0, 0.509687, 53.9407, 31.7763, 23.6318)
+
+[node name="dark-rock-cube" parent="Enterance-to-darkness" instance=ExtResource("65_p7sva")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.5, 0, 0)
+
+[node name="dark-rock-cube4" parent="Enterance-to-darkness" instance=ExtResource("65_p7sva")]
+transform = Transform3D(5, 0, 0, 0, -5, 4.37114e-07, 0, -4.37114e-07, -5, 7.5, 2, 0)
+
+[node name="dark-rock-cube2" parent="Enterance-to-darkness" instance=ExtResource("65_p7sva")]
+transform = Transform3D(-5, 0, -1.19209e-07, 0, 5, 0, 1.19209e-07, 0, -5, -7.5, 0, 0)
+
+[node name="dark-rock-cube3" parent="Enterance-to-darkness" instance=ExtResource("65_p7sva")]
+transform = Transform3D(-5, 1.42109e-14, 1.19209e-07, 0, -5, 4.37114e-07, 1.19209e-07, 4.37114e-07, 5, -7.5, 2, 0)
+
+[node name="dark-rock-cube5" parent="Enterance-to-darkness" instance=ExtResource("65_p7sva")]
+transform = Transform3D(0.234138, 4.36634e-07, 4.99452, -4.72425e-17, -5, 4.37114e-07, 4.99452, -2.04689e-08, -0.234138, 0, 0.0576859, -12.6019)
+
+[node name="dark_spike" parent="Enterance-to-darkness" instance=ExtResource("67_6w8ga")]
+transform = Transform3D(14, 0, 0, 0, -5.5369, 13.4528, 0, -19.2183, -3.87583, 0, -1.93556, -10.4449)
+
+[node name="coin" parent="Enterance-to-darkness" instance=ExtResource("31_h1ucm")]
+transform = Transform3D(0.999997, 0, -2.98023e-08, 0, 0.999999, 0, 2.98023e-08, 0, 0.999997, 0, 1.12238, 0)
+
+[node name="coin2" parent="." instance=ExtResource("31_h1ucm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.3384, 35.3941, -3.51405)
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]

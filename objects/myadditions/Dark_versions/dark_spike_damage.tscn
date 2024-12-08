@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1bhybw7d10a3"]
+
+[ext_resource type="PackedScene" uid="uid://73nktay1f7dh" path="res://models/props/jewel.glb" id="1_svjj5"]
+[ext_resource type="Texture2D" uid="uid://b3dcegptytkk4" path="res://models/props/Textures/new_colormap.png" id="2_qerh1"]
+[ext_resource type="PackedScene" uid="uid://bunxb353h3lje" path="res://objects/damage_dealer_area_3d.tscn" id="3_rcyg2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_11mft"]
+albedo_texture = ExtResource("2_qerh1")
+uv1_offset = Vector3(0.635, 0.275, 0)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_f0ji2"]
+data = PackedVector3Array(0.0832, 0.1852, 0.1441, 0.1664, 0.1852, 0, 0, 0, 0, -0.0832, 0.1852, 0.1441, 0.0832, 0.1852, 0.1441, 0, 0, 0, 0.0832, 0.1852, 0.1441, 0, 0.3705, 0, 0.1664, 0.1852, 0, 0, 0.3705, 0, -0.0832, 0.1852, -0.1441, 0.0832, 0.1852, -0.1441, 0, 0, 0, 0.1664, 0.1852, 0, 0.0832, 0.1852, -0.1441, 0.0832, 0.1852, -0.1441, -0.0832, 0.1852, -0.1441, 0, 0, 0, 0, 0.3705, 0, -0.1664, 0.1852, 0, -0.0832, 0.1852, -0.1441, -0.0832, 0.1852, 0.1441, 0, 0, 0, -0.1664, 0.1852, 0, 0, 0.3705, 0, 0.0832, 0.1852, 0.1441, -0.0832, 0.1852, 0.1441, -0.0832, 0.1852, 0.1441, -0.1664, 0.1852, 0, 0, 0.3705, 0, -0.1664, 0.1852, 0, 0, 0, 0, -0.0832, 0.1852, -0.1441, 0.1664, 0.1852, 0, 0, 0.3705, 0, 0.0832, 0.1852, -0.1441)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p7rv3"]
+size = Vector3(0.0344048, 1.10309, 0.0360641)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2be0"]
+size = Vector3(0.0267067, 1.14154, 0.0285492)
+
+[node name="dark_spike" instance=ExtResource("1_svjj5")]
+
+[node name="jewel" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, -0.555, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_11mft")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." index="1"]
+sync_to_physics = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, -0.555, 0)
+shape = SubResource("ConcavePolygonShape3D_f0ji2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000112534, 0, 0)
+shape = SubResource("BoxShape3D_p7rv3")
+
+[node name="DamageDealerArea3D" parent="." index="2" instance=ExtResource("3_rcyg2")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="DamageDealerArea3D" index="1"]
+shape = SubResource("BoxShape3D_h2be0")
