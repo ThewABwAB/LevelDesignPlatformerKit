@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd2ycdt7uaevp"]
+
+[ext_resource type="PackedScene" uid="uid://blqf5cwsk25xj" path="res://models/core_models/grass.glb" id="1_beod8"]
+
+[node name="grass_new" instance=ExtResource("1_beod8")]
+
+[node name="grass2" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1.2, 0, 0, 0, 1, 0, 0, 0)
