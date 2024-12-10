@@ -1740,10 +1740,10 @@ transform = Transform3D(-0.656085, 0, 0.754687, 0, 1, 0, -0.754687, 0, -0.656085
 transform = Transform3D(-0.752691, 0, -0.658374, 0, 1, 0, 0.658374, 0, -0.752691, 5.46741, 9.9505, 5.42505)
 
 [node name="flowers-tall-prefab2" parent="." instance=ExtResource("28_ipsn4")]
-transform = Transform3D(-0.115554, -0.0134169, -0.791497, -0.0367219, 0.799115, -0.00818484, 0.790758, 0.0351494, -0.116042, 7.77899, 10.9505, 4.74879)
+transform = Transform3D(-0.115554, -0.0134169, -0.791497, -0.0367219, 0.799115, -0.00818484, 0.790758, 0.0351494, -0.116042, 8.0092, 10.9505, 5.04504)
 
 [node name="flowers-tall-prefab3" parent="." instance=ExtResource("28_ipsn4")]
-transform = Transform3D(0.868034, 0, -0.496504, 0, 1, 0, 0.496504, 0, 0.868034, 9.05967, 10.9505, 3.10956)
+transform = Transform3D(0.868034, 0, -0.496504, 0, 1, 0, 0.496504, 0, 0.868034, 9.19289, 10.9505, 3.39162)
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]
