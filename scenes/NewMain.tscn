@@ -864,7 +864,7 @@ transform = Transform3D(1.82, 0, 5.96046e-08, 0, 2, 0, -5.96046e-08, 0, 1.82, -4
 transform = Transform3D(1.38564, 0, 0.799999, 0, 2, 0, -0.799999, 0, 1.38564, -4.96399, 8, 6.23799)
 
 [node name="floating-island-small2" type="Node3D" parent="World/linking-island"]
-transform = Transform3D(0.496033, 0, -0.868301, 0, 1, 0, 0.868301, 0, 0.496033, -4.19769, 8.2379, 13.9064)
+transform = Transform3D(0.496033, 0, -0.868301, 0, 1, 0, 0.868301, 0, 0.496033, -4.19769, 7.94319, 13.9064)
 metadata/_edit_group_ = true
 
 [node name="grass-hexagon" parent="World/linking-island/floating-island-small2" instance=ExtResource("22_7e5sl")]
@@ -1255,7 +1255,7 @@ metadata/_edit_group_ = true
 transform = Transform3D(-0.0117687, 0, 0.666896, 0, 0.667, 0, -0.666896, 0, -0.0117687, 0.920306, 0.526676, 0.407782)
 
 [node name="door2" parent="World" instance=ExtResource("32_is3c5")]
-transform = Transform3D(-0.693914, 0, -2.91864, 0, 3, 0, 2.91864, 0, -0.693914, 34.9824, 34.6616, 12.6858)
+transform = Transform3D(-0.693914, 0, -2.91864, 0, 3, 0, 2.91864, 0, -0.693914, 34.9824, 34.3669, 12.6858)
 look_at_door_when_opens = true
 open_door_with_coins = 17
 metadata/_edit_group_ = true
