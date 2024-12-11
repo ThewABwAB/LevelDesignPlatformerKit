@@ -12,12 +12,15 @@ height = 1.02799
 
 [node name="tree-pine-prefab" instance=ExtResource("1_t8ksw")]
 
-[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." index="1"]
+[node name="tree-pine" parent="." index="0"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" index="0"]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="tree-pine" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tree-pine/AnimatableBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.777443, 0)
 shape = SubResource("CapsuleShape3D_h8upa")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="tree-pine/AnimatableBody3D" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42407, 0)
 shape = SubResource("CapsuleShape3D_sd00i")

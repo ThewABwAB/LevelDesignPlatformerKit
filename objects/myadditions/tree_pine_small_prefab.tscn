@@ -15,6 +15,9 @@ height = 0.327575
 
 [node name="DitherObstacle" parent="." index="0" instance=ExtResource("2_ox7q6")]
 
+[node name="tree-pine-small" parent="." index="1"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="tree-pine-small" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree-pine-small/AnimatableBody3D" index="0"]
