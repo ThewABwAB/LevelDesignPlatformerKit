@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://dexxweq8e64nx"]
+[gd_scene load_steps=80 format=3 uid="uid://dexxweq8e64nx"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ymoxt"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_4idm0"]
@@ -25,7 +25,6 @@
 [ext_resource type="PackedScene" uid="uid://bpharv43ulngb" path="res://objects/platform_moving.tscn" id="23_7hryr"]
 [ext_resource type="PackedScene" uid="uid://dnbt3mrfvervy" path="res://models/props/platform-overhang.glb" id="23_i0vxa"]
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="23_ngj6c"]
-[ext_resource type="PackedScene" uid="uid://g73m8k0j7lyo" path="res://objects/button.tscn" id="24_5ibya"]
 [ext_resource type="PackedScene" uid="uid://dfiytyix2nkve" path="res://objects/myadditions/button_two.tscn" id="24_b1a0o"]
 [ext_resource type="PackedScene" uid="uid://cxajuuoc6jd61" path="res://objects/myadditions/last-door.tscn" id="24_g3fvm"]
 [ext_resource type="PackedScene" uid="uid://bw7nsi1v8g30s" path="res://models/props/poles.glb" id="24_jncmx"]
@@ -729,6 +728,11 @@ is_on_from_start = false
 [node name="platform-moving3" parent="World/moiving_platforms_with_buttons" instance=ExtResource("23_7hryr")]
 transform = Transform3D(1, 0, -7.45058e-08, 0, 1, 0, 7.45058e-08, 0, 1, 7.45863, 15.542, 11.159)
 
+[node name="button" parent="World/moiving_platforms_with_buttons/platform-moving3" node_paths=PackedStringArray("target") instance=ExtResource("24_b1a0o")]
+transform = Transform3D(1, 0, 7.45058e-08, 0, 1, 0, -7.45058e-08, 0, 1, -0.0173597, 0.413467, 0.0344315)
+target = NodePath("../../moving_object_path3")
+press_is_permanent = true
+
 [node name="moving_object_path3" parent="World/moiving_platforms_with_buttons" node_paths=PackedStringArray("object_to_move") instance=ExtResource("20_31ugc")]
 curve = SubResource("Curve3D_nnmb1")
 object_to_move = NodePath("../platform-moving3")
@@ -738,6 +742,11 @@ ping_pong = true
 
 [node name="platform-moving4" parent="World/moiving_platforms_with_buttons" instance=ExtResource("23_7hryr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5803, 1.49556, 10.2375)
+
+[node name="button" parent="World/moiving_platforms_with_buttons/platform-moving4" node_paths=PackedStringArray("target") instance=ExtResource("24_b1a0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.421633, 0)
+target = NodePath("../../moving_object_path4")
+press_is_permanent = true
 
 [node name="moving_object_path4" parent="World/moiving_platforms_with_buttons" node_paths=PackedStringArray("object_to_move") instance=ExtResource("20_31ugc")]
 curve = SubResource("Curve3D_q0esm")
@@ -816,7 +825,7 @@ transform = Transform3D(0.204308, 0, -0.978906, 0, 1, 0, 0.978906, 0, 0.204308, 
 transform = Transform3D(0.204308, 0, -0.978907, 0, 1, 0, 0.978907, 0, 0.204308, -11.6022, -1.4771, 2.45425)
 
 [node name="coin5" parent="World/linking-island" instance=ExtResource("31_h1ucm")]
-transform = Transform3D(0.204308, 0, -0.978907, 0, 1, 0, 0.978907, 0, 0.204308, -12.7594, -5.7446, -7.99828)
+transform = Transform3D(0.204308, 0, -0.978907, 0, 1, 0, 0.978907, 0, 0.204308, -12.9481, -4.78662, -9.97756)
 
 [node name="coin6" parent="World/linking-island" instance=ExtResource("31_h1ucm")]
 transform = Transform3D(0.204308, 0, -0.978907, 0, 1, 0, 0.978907, 0, 0.204308, -1.68059, 11.3668, -12.3889)
@@ -1167,7 +1176,7 @@ transform = Transform3D(5.46376, -2.41475e-13, 3.1545, 2.55795e-13, 2.25, 9.1114
 transform = Transform3D(-18, 5.43586e-06, 0, -1.35896e-06, -18, 0, 0, 0, 18, 0, 0, 0)
 
 [node name="floating-island-small13" type="Node3D" parent="World/linking-island"]
-transform = Transform3D(-0.2013, 0, -0.97953, 0, 1, 0, 0.97953, 0, -0.2013, -10.5445, -9.9451, -9.34441)
+transform = Transform3D(-0.0148694, 0, -0.99989, 0, 1, 0, 0.99989, 0, -0.0148694, -10.6588, -9.9451, -8.51067)
 metadata/_edit_group_ = true
 
 [node name="grass-hexagon" parent="World/linking-island/floating-island-small13" instance=ExtResource("22_7e5sl")]
@@ -1190,10 +1199,6 @@ transform = Transform3D(3.03542, -4.56121e-13, 1.7525, 1.42109e-13, 4.25, 5.0619
 
 [node name="rock-prefab" parent="World/linking-island/floating-island-small13" instance=ExtResource("7_7w2i7")]
 transform = Transform3D(-10, 2.11394e-06, 0, -1.50996e-06, -14, 0, 0, 0, 10, 0, 0, 0)
-
-[node name="button" parent="World/linking-island/floating-island-small13" node_paths=PackedStringArray("target") instance=ExtResource("24_5ibya")]
-transform = Transform3D(0.91774, 0, 0.397179, 0, 1, 0, -0.397179, 0, 0.91774, -1.62867, 5.12022, 0.875532)
-target = NodePath("../../../moiving_platforms_with_buttons/moving_object_path3")
 
 [node name="floating-island-small14" type="Node3D" parent="World/linking-island"]
 transform = Transform3D(0.99882, 0, 0.048588, 0, 1, 0, -0.048588, 0, 0.99882, -10.8118, -5.6776, 2.77998)
@@ -1284,11 +1289,6 @@ transform = Transform3D(-2.98023e-08, 0, 0.667, 0, 0.667, 0, -0.667, 0, -2.98023
 
 [node name="number-one" parent="World/door3" instance=ExtResource("40_30don")]
 transform = Transform3D(-2.98023e-08, 0, 0.667, 0, 0.667, 0, -0.667, 0, -2.98023e-08, 0.837332, 0.553274, 0.532169)
-
-[node name="button" parent="World" node_paths=PackedStringArray("target") instance=ExtResource("24_5ibya")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.2283, 3.18192, 10.2375)
-target = NodePath("../moiving_platforms_with_buttons/moving_object_path4")
-press_is_permanent = true
 
 [node name="floating-island-dubble" type="Node3D" parent="World"]
 transform = Transform3D(0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866026, 2.48479, 10.5708, 25.9117)
