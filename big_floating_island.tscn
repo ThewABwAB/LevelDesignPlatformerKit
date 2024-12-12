@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3 uid="uid://770ybe8vf4vt"]
+
+[ext_resource type="PackedScene" uid="uid://8k7snglm6hxy" path="res://objects/myadditions/Hexagons/massive_grass_hexagon.tscn" id="1_dictr"]
+[ext_resource type="PackedScene" uid="uid://cj2o25a7mcceg" path="res://objects/myadditions/Hexagons/shape_hexagon_prefab_sized.tscn" id="2_km8hp"]
+[ext_resource type="PackedScene" uid="uid://8r4hy1jhwdso" path="res://objects/myadditions/Rocks_Prefab.tscn" id="3_urfhp"]
+[ext_resource type="PackedScene" uid="uid://bqiivlegiim7o" path="res://objects/myadditions/grass_cube.tscn" id="4_lv0n1"]
+[ext_resource type="PackedScene" uid="uid://by1jl0m0dpmbq" path="res://objects/myadditions/grass_cube_new.tscn" id="5_gueip"]
+
+[node name="Big-floating-island" type="Node3D"]
+
+[node name="Lower-level" type="Node3D" parent="."]
+
+[node name="massive-grass-hexagon1" parent="Lower-level" instance=ExtResource("1_dictr")]
+transform = Transform3D(-2, 0, -2.08616e-07, 0, 2, 0, 2.08616e-07, 0, -2, 4.3, 3, 2.542)
+
+[node name="massive-grass-hexagon2" parent="Lower-level" instance=ExtResource("1_dictr")]
+transform = Transform3D(1.82, 0, 5.96046e-08, 0, 2, 0, -5.96046e-08, 0, 1.82, -4.65199, 4, -4.05)
+
+[node name="massive-grass-hexagon3" parent="Lower-level" instance=ExtResource("1_dictr")]
+transform = Transform3D(1.38564, 0, 0.799999, 0, 2, 0, -0.799999, 0, 1.38564, -4.964, 0, 6.238)
+visible = false
+
+[node name="shape-hexagon-prefab-sized1" parent="Lower-level" instance=ExtResource("2_km8hp")]
+transform = Transform3D(17.52, 0, 4.76837e-07, 0, 3.25, 0, -4.76837e-07, 0, 17.52, 4.30027, 0, 2.54148)
+
+[node name="shape-hexagon-prefab-sized2" parent="Lower-level" instance=ExtResource("2_km8hp")]
+transform = Transform3D(15.94, 0, 2.38419e-07, 0, 4, 0, -2.38419e-07, 0, 15.94, -4.65171, 0, -4.05051)
+
+[node name="shape-hexagon-prefab-sized3" parent="Lower-level" instance=ExtResource("2_km8hp")]
+transform = Transform3D(12.1417, -4.29289e-13, 7.00999, 5.68434e-13, 4, 2.02477e-12, -7.00999, -4.19196e-13, 12.1417, -4.96371, 0, 6.23747)
+visible = false
+
+[node name="rock-prefab" parent="Lower-level" instance=ExtResource("3_urfhp")]
+transform = Transform3D(-40, 4.52987e-06, 4.76838e-07, -6.03983e-06, -30, -1.22121e-14, 4.76838e-07, -6.31595e-14, 40, 0, 0, 0)
+
+[node name="Small-grass-thing1" type="Node3D" parent="Lower-level"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.41377, -0.277255, 8.91256)
+
+[node name="grass-cube8" parent="Lower-level/Small-grass-thing1" instance=ExtResource("4_lv0n1")]
+transform = Transform3D(-3, 0, -4.52987e-07, 0, 2.4, 0, 4.52987e-07, 0, -3, -3.00472, 0, 1.35026)
+
+[node name="grass-cube11" parent="Lower-level/Small-grass-thing1" instance=ExtResource("4_lv0n1")]
+transform = Transform3D(-1.5, 0, -2.59808, 0, 2.4, 0, 2.59808, 0, -1.5, -2.6576, 0, 1.91333)
+
+[node name="grass-cube-new9" parent="Lower-level/Small-grass-thing1" instance=ExtResource("5_gueip")]
+transform = Transform3D(-1.22474, 1, -1.22474, 1.41421, -6.18172e-08, -1.41421, -0.707105, -1.73205, -0.707105, -3.34585, 0.435991, 3.15997)
+
+[node name="grass-cube-new24" parent="Lower-level/Small-grass-thing1" instance=ExtResource("5_gueip")]
+transform = Transform3D(-3.9303e-08, 1.6, -1.2871e-07, 1.13137, -4.94538e-08, -1.13137, -1.13137, -8.02718e-08, -1.13137, -4.42074, 0.628882, 1.48588)
+
+[node name="Small-grass-thing2" type="Node3D" parent="Lower-level"]
+
+[node name="grass-cube9" parent="Lower-level/Small-grass-thing2" instance=ExtResource("4_lv0n1")]
+transform = Transform3D(-4.33013, 0, -2.5, 0, 2.4, 0, 2.5, 0, -4.33013, -10.0752, -0.560345, 6.80323)
+
+[node name="grass-cube12" parent="Lower-level/Small-grass-thing2" instance=ExtResource("4_lv0n1")]
+transform = Transform3D(-4.33013, 0, 2.5, 0, 2.4, 0, -2.5, 0, -4.33013, -10.1318, -0.560345, 5.70024)
+
+[node name="grass-cube-new10" parent="Lower-level/Small-grass-thing2" instance=ExtResource("5_gueip")]
+transform = Transform3D(0.707107, 1.73205, 0.707105, 1.41421, -1.5791e-06, -1.41421, -1.22474, 1, -1.22474, -11.9025, -0.155956, 4.00934)
+
+[node name="grass-cube-new12" parent="Lower-level/Small-grass-thing2" instance=ExtResource("5_gueip")]
+transform = Transform3D(0.707107, 1.73205, 0.707105, 1.41421, -1.5791e-06, -1.41421, -1.22474, 1, -1.22474, -12.3905, 0.0917156, 4.8677)
+
+[node name="grass-cube-new13" parent="Lower-level/Small-grass-thing2" instance=ExtResource("5_gueip")]
+transform = Transform3D(-0.707107, 1.73205, -0.707103, 1.41421, -1.91627e-06, -1.41421, -1.22475, -0.999998, -1.22474, -12.4741, -0.237914, 7.43469)
+
+[node name="grass-cube-new15" parent="Lower-level/Small-grass-thing2" instance=ExtResource("5_gueip")]
+transform = Transform3D(-0.707107, 1.73205, -0.707103, 1.41421, -1.91627e-06, -1.41421, -1.22475, -0.999998, -1.22474, -11.7565, 0.0716483, 8.64352)
+
+[node name="Upper Level" type="Node3D" parent="."]
+transform = Transform3D(-5.63877e-08, 0, 1.29, 0, 1, 0, -1.29, 0, -5.63877e-08, 0.236, 32, 0.266)
+
+[node name="massive-grass-hexagon" parent="Upper Level" instance=ExtResource("1_dictr")]
+transform = Transform3D(-2, 0, -2.08616e-07, 0, 2, 0, 2.08616e-07, 0, -2, 4.3, 4, 2.542)
+
+[node name="shape-hexagon-prefab-sized3" parent="Upper Level" instance=ExtResource("2_km8hp")]
+transform = Transform3D(17.52, 0, 4.76837e-07, 0, 4.5, 0, -4.76837e-07, 0, 17.52, 4.30027, -0.000699997, 2.54148)
+
+[node name="shape-hexagon-prefab-sized2" parent="Upper Level" instance=ExtResource("2_km8hp")]
+transform = Transform3D(15.94, 0, 2.38419e-07, 0, 8.6, 0, -2.38419e-07, 0, 15.94, -4.65171, -0.000699997, -4.05051)
+
+[node name="shape-hexagon-prefab-sized" parent="Upper Level" instance=ExtResource("2_km8hp")]
+transform = Transform3D(12.1417, -6.97594e-13, 7.00998, 5.68433e-13, 6.5, 2.02476e-12, -7.00998, -6.81193e-13, 12.1417, -4.96371, -0.000699997, 6.23747)
+
+[node name="rock-prefab" parent="Upper Level" instance=ExtResource("3_urfhp")]
+transform = Transform3D(-40, 1.20797e-05, 4.76838e-07, -6.03983e-06, -80, -1.22121e-14, 4.76838e-07, -1.68425e-13, 40, 0, 0, 0)
+
+[node name="massive-grass-hexagon2" parent="Upper Level" instance=ExtResource("1_dictr")]
+transform = Transform3D(1.82, 0, 5.96046e-08, 0, 2, 0, -5.96046e-08, 0, 1.82, -4.65199, 7.92, -4.05)
+
+[node name="massive-grass-hexagon3" parent="Upper Level" instance=ExtResource("1_dictr")]
+transform = Transform3D(1.38564, 0, 0.799999, 0, 2, 0, -0.799999, 0, 1.38564, -4.964, 6, 6.238)
