@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://dexxweq8e64nx"]
+[gd_scene load_steps=66 format=3 uid="uid://dexxweq8e64nx"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ymoxt"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_4idm0"]
@@ -52,6 +52,7 @@
 [ext_resource type="PackedScene" uid="uid://ec04ayb53gv8" path="res://objects/myadditions/tree_pine_prefab.tscn" id="44_vde7g"]
 [ext_resource type="PackedScene" uid="uid://bw8h71jgw2ycu" path="res://objects/myadditions/cloud_new.tscn" id="47_cdxbp"]
 [ext_resource type="PackedScene" uid="uid://ci5aibay42b1h" path="res://objects/myadditions/left_right_anim_hostile.tscn" id="56_63hb4"]
+[ext_resource type="PackedScene" uid="uid://deyf38ysa1iy3" path="res://objects/myadditions/cloud_island.tscn" id="57_x4m26"]
 [ext_resource type="PackedScene" uid="uid://cin4l66d5bp1m" path="res://objects/myadditions/bouncy_cloud.tscn" id="62_yiq7n"]
 [ext_resource type="PackedScene" uid="uid://dgrptcrc8uysu" path="res://objects/myadditions/group_of_clouds.tscn" id="63_hqv3i"]
 [ext_resource type="PackedScene" uid="uid://hc1sf251ka82" path="res://objects/myadditions/Dark_versions/dark_rock_cube.tscn" id="65_p7sva"]
@@ -343,6 +344,7 @@ open_door_with_coins = 18
 
 [node name="flag" parent="World/Start/starting-island/last-door" instance=ExtResource("37_75r8c")]
 transform = Transform3D(-2.98023e-08, 0, 0.526313, 0, 0.526315, 0, -0.526313, 0, -2.98023e-08, 0, 0, 0)
+speedrun_mode = true
 
 [node name="number-eight" parent="World/Start/starting-island/last-door" instance=ExtResource("26_iar8i")]
 transform = Transform3D(0, 0, 0.667, 0, 0.667, 0, -0.667, 0, 0, 1.03736, 0.552877, 0.531841)
@@ -1881,6 +1883,9 @@ transform = Transform3D(-5, 0, -2.38419e-07, 0, 5, 0, 2.38419e-07, 0, -5, -4.8, 
 
 [node name="dark-rock-cube3" parent="World/Enterance-to-darkness/180degrees/left-right-anim2" instance=ExtResource("65_p7sva")]
 transform = Transform3D(-5, 4.26326e-14, 2.38419e-07, 0, -5, 4.37114e-07, 2.38419e-07, 4.37114e-07, 5, -4.8, 2, 0)
+
+[node name="Cloud-island" parent="." instance=ExtResource("57_x4m26")]
+transform = Transform3D(0.28065, 0, -0.95981, 0, 1, 0, 0.95981, 0, 0.28065, 61.6613, 25.6656, -24.5228)
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]
