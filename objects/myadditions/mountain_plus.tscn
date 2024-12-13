@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://doosrsevljq1a"]
+
+[ext_resource type="PackedScene" uid="uid://8r4hy1jhwdso" path="res://objects/myadditions/Rocks_Prefab.tscn" id="1_c0e0r"]
+[ext_resource type="PackedScene" uid="uid://cj2o25a7mcceg" path="res://objects/myadditions/Hexagons/shape_hexagon_prefab_sized.tscn" id="2_2wwfw"]
+[ext_resource type="PackedScene" uid="uid://bdhjrlhycijdq" path="res://models/props/block-snow-overhang-low-hexagon.glb" id="3_cjdhv"]
+[ext_resource type="PackedScene" uid="uid://dl70c7enwrsu2" path="res://models/props/block-snow-low-hexagon.glb" id="4_lilu6"]
+
+[node name="Mounatain-island-base" type="Node3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="rocks-prefab" parent="Node3D" instance=ExtResource("1_c0e0r")]
+transform = Transform3D(-40, 4.37114e-06, 0, -3.49691e-06, -50, 0, 0, 0, 40, 0, 0, 0)
+
+[node name="shape-hexagon-prefab-sized1" parent="Node3D" instance=ExtResource("2_2wwfw")]
+transform = Transform3D(17.52, 0, 4.76837e-07, 0, 4, 0, -4.76837e-07, 0, 17.52, 4.30027, -0.000699997, 2.54148)
+
+[node name="shape-hexagon-prefab-sized3" parent="Node3D" instance=ExtResource("2_2wwfw")]
+transform = Transform3D(12.1417, -4.29289e-13, 7.00999, 5.68434e-13, 4, 2.02477e-12, -7.00999, -4.19196e-13, 12.1417, -4.96371, -0.000699997, 6.23747)
+
+[node name="block-snow-overhang-low-hexagon2" parent="Node3D" instance=ExtResource("3_cjdhv")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 9.02344, 0.115394, 5.27835)
+
+[node name="block-snow-low-hexagon2" parent="Node3D" instance=ExtResource("4_lilu6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.65438, 3.9993, 1.36772)
+
+[node name="block-snow-overhang-low-hexagon3" parent="Node3D" instance=ExtResource("3_cjdhv")]
+transform = Transform3D(10, 0, 0, 0, 8, 0, 0, 0, 10, -1.17376, 0.142015, 10.1434)
+
+[node name="Node3D2" type="Node3D" parent="."]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
+
+[node name="rocks-prefab2" parent="Node3D2" instance=ExtResource("1_c0e0r")]
+transform = Transform3D(-40, 5.68248e-06, 0, -3.49691e-06, -65, 0, 0, 0, 40, 0, 0, 0)
+
+[node name="shape-hexagon-prefab-sized1" parent="Node3D2" instance=ExtResource("2_2wwfw")]
+transform = Transform3D(17.52, 0, 4.76837e-07, 0, 4, 0, -4.76837e-07, 0, 17.52, 4.30027, -0.000699997, 2.54148)
+
+[node name="shape-hexagon-prefab-sized2" parent="Node3D2" instance=ExtResource("2_2wwfw")]
+transform = Transform3D(15.94, 0, 2.38419e-07, 0, 4, 0, -2.38419e-07, 0, 15.94, -4.65171, -0.000699997, -4.05051)
+
+[node name="shape-hexagon-prefab-sized3" parent="Node3D2" instance=ExtResource("2_2wwfw")]
+transform = Transform3D(12.1417, -4.29289e-13, 7.00999, 5.68434e-13, 4, 2.02477e-12, -7.00999, -4.19196e-13, 12.1417, -4.96371, -0.000699997, 6.23747)
+
+[node name="Node3D3" type="Node3D" parent="."]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0, 0, 0)
+
+[node name="rocks-prefab3" parent="Node3D3" instance=ExtResource("1_c0e0r")]
+transform = Transform3D(-40, 4.80825e-06, 0, -3.49691e-06, -55, 0, 0, 0, 40, 0, 0, 0)
+
+[node name="shape-hexagon-prefab-sized1" parent="Node3D3" instance=ExtResource("2_2wwfw")]
+transform = Transform3D(17.52, 0, 4.76837e-07, 0, 4, 0, -4.76837e-07, 0, 17.52, 4.30027, -0.000699997, 2.54148)
+
+[node name="shape-hexagon-prefab-sized2" parent="Node3D3" instance=ExtResource("2_2wwfw")]
+transform = Transform3D(15.94, 0, 2.38419e-07, 0, 4, 0, -2.38419e-07, 0, 15.94, -4.65171, -0.000699997, -4.05051)
+
+[node name="shape-hexagon-prefab-sized3" parent="Node3D3" instance=ExtResource("2_2wwfw")]
+transform = Transform3D(12.1417, -4.29289e-13, 7.00999, 5.68434e-13, 4, 2.02477e-12, -7.00999, -4.19196e-13, 12.1417, -4.96371, -0.000699997, 6.23747)
+
+[node name="Node3D4" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="rocks-prefab4" parent="Node3D4" instance=ExtResource("1_c0e0r")]
+transform = Transform3D(-40, 3.0598e-06, 0, -3.49691e-06, -35, 0, 0, 0, 40, 0, 0, 0)
+
+[node name="shape-hexagon-prefab-sized1" parent="Node3D4" instance=ExtResource("2_2wwfw")]
+transform = Transform3D(17.52, 0, 4.76837e-07, 0, 4, 0, -4.76837e-07, 0, 17.52, 4.30027, -0.000699997, 2.54148)
+
+[node name="shape-hexagon-prefab-sized2" parent="Node3D4" instance=ExtResource("2_2wwfw")]
+transform = Transform3D(15.94, 0, 2.38419e-07, 0, 4, 0, -2.38419e-07, 0, 15.94, -4.65171, -0.000699997, -4.05051)
+
+[node name="shape-hexagon-prefab-sized3" parent="Node3D4" instance=ExtResource("2_2wwfw")]
+transform = Transform3D(12.1417, -4.29289e-13, 7.00999, 5.68434e-13, 4, 2.02477e-12, -7.00999, -4.19196e-13, 12.1417, -4.96371, -0.000699997, 6.23747)

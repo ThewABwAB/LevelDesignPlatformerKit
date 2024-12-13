@@ -234,10 +234,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4, 6, 8),
-"transitions": PackedFloat32Array(0.5, 2, 0.5, 2, 0.5),
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8),
+"transitions": PackedFloat32Array(0.5, 2, 0.5, 2, 0.5, 2, 0.5, 2, 0.5),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0.2, 0), Vector3(0, 0, 0), Vector3(0, -0.2, 0), Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, 0.2, 0), Vector3(0, 0, 0), Vector3(0, -0.2, 0), Vector3(0, 0, 0), Vector3(0, 0.2, 0), Vector3(0, 0, 0), Vector3(0, -0.2, 0), Vector3(0, 0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -249,7 +249,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+"values": [Vector3(0, 6.28319, 0), Vector3(0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_g2frh"]
@@ -326,8 +326,9 @@ _data = {
 "escape": SubResource("Animation_ggb6m")
 }
 
-[node name="coin" type="Area3D"]
+[node name="coin" type="Area3D" node_paths=PackedStringArray("animation_player")]
 script = ExtResource("2_gaakh")
+animation_player = NodePath("Lost-Soul/AnimationPlayer")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
@@ -357,7 +358,7 @@ color_ramp = SubResource("Gradient_7tsk2")
 [node name="Lost-Soul" type="Node3D" parent="."]
 
 [node name="torso" type="MeshInstance3D" parent="Lost-Soul"]
-transform = Transform3D(0.682423, 0, 0.155882, 0, 0.7, 0, -0.155882, 0, 0.682423, -0.332922, 1.29885, -0.00326791)
+transform = Transform3D(0.684704, 0, 0.145538, 0, 0.7, 0, -0.145538, 0, 0.684704, -0.332922, 1.29885, -0.00326791)
 mesh = SubResource("ArrayMesh_t30rp")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_vninx")

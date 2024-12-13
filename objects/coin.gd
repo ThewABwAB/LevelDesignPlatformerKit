@@ -2,7 +2,7 @@ extends Area3D
 
 var time := 0.0
 var grabbed := false
-
+@export var animation_player: AnimationPlayer
 # Collecting coins
 
 func _on_body_entered(body):
@@ -11,7 +11,7 @@ func _on_body_entered(body):
 		body.collect_coin()
 		
 		Audio.play("res://sounds/coin.ogg") # Play sound
-		
+		animation_player.play("escape")
 		$Mesh.queue_free() # Make invisible
 		$Particles.emitting = false # Stop emitting stars
 		
