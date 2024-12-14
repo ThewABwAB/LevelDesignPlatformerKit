@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvra8cwy25ec2"]
+
+[ext_resource type="PackedScene" uid="uid://8r4hy1jhwdso" path="res://objects/myadditions/Rocks_Prefab.tscn" id="1_x5bwy"]
+[ext_resource type="PackedScene" uid="uid://cpbsa0m0mtt1y" path="res://objects/myadditions/snow_hexagon.tscn" id="2_4niqe"]
+
+[node name="cloud_mountain" type="Node3D"]
+
+[node name="rocks-prefab" parent="." instance=ExtResource("1_x5bwy")]
+transform = Transform3D(40, 0, 0, 0, 75, 0, 0, 0, 40, 0, 0, 0)
+
+[node name="rocks-prefab2" parent="." instance=ExtResource("1_x5bwy")]
+transform = Transform3D(34.641, 0, -20, 0, 97.5, 0, 20, 0, 34.641, 0, 0, 0)
+
+[node name="rocks-prefab3" parent="." instance=ExtResource("1_x5bwy")]
+transform = Transform3D(34.641, 0, 20, 0, 82.5, 0, -20, 0, 34.641, 0, 0, 0)
+
+[node name="rocks-prefab4" parent="." instance=ExtResource("1_x5bwy")]
+transform = Transform3D(-1.74846e-06, 0, 40, 0, 52.5, 0, -40, 0, -1.74846e-06, 0, 0, 0)
+
+[node name="Snow-Hexagon" parent="." instance=ExtResource("2_4niqe")]
+transform = Transform3D(0.58, 0, 0, 0, 3, 0, 0, 0, 0.58, -5.3015, 19.7941, -7.02148)
+
+[node name="Snow-Hexagon4" parent="." instance=ExtResource("2_4niqe")]
+transform = Transform3D(0.55, 0, 0, 0, 3, 0, 0, 0, 0.55, -5.5232, 19.7941, -2.18359)
+
+[node name="Snow-Hexagon5" parent="." instance=ExtResource("2_4niqe")]
+transform = Transform3D(0.55, 0, 0, 0, 3.1, 0, 0, 0, 0.55, -1.71994, 19.7941, -2.18359)
+
+[node name="Snow-Hexagon3" parent="." instance=ExtResource("2_4niqe")]
+transform = Transform3D(0.606218, 0, 0.35, 0, 3.2, 0, -0.35, 0, 0.606218, -5.11637, 19.7941, -4.60256)
+
+[node name="Snow-Hexagon6" parent="." instance=ExtResource("2_4niqe")]
+transform = Transform3D(0.69282, 0, 0.4, 0, 3.4, 0, -0.4, 0, 0.69282, -3.94067, 19.7941, -4.60256)
+
+[node name="Snow-Hexagon2" parent="." instance=ExtResource("2_4niqe")]
+transform = Transform3D(0.58, 0, 0, 0, 3.3, 0, 0, 0, 0.58, -2.81204, 19.7941, -7.04026)

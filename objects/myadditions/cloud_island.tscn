@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://deyf38ysa1iy3"]
 
-[ext_resource type="PackedScene" uid="uid://doosrsevljq1a" path="res://objects/myadditions/mountain_plus.tscn" id="1_xbhfs"]
+[ext_resource type="PackedScene" uid="uid://doosrsevljq1a" path="res://objects/myadditions/CloudArea/mountain_plus.tscn" id="1_xbhfs"]
 [ext_resource type="PackedScene" uid="uid://4vi6p4ipabj3" path="res://objects/myadditions/mountain.tscn" id="2_8617r"]
 
 [node name="Cloud-island" type="Node3D"]
