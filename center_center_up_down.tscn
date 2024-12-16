@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://dunqe0l5bq7f4"]
+
+[ext_resource type="PackedScene" uid="uid://bw8h71jgw2ycu" path="res://objects/myadditions/cloud_new.tscn" id="1_ox52l"]
+
+[sub_resource type="Animation" id="Animation_se2p7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6ycj2"]
+resource_name = "center-center-up-down"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5, 7.5, 10),
+"transitions": PackedFloat32Array(0.5, 2, 0.5, 2, 0.5),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.5, 0), Vector3(0, 0, 0), Vector3(0, -0.5, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_js5wk"]
+_data = {
+"RESET": SubResource("Animation_se2p7"),
+"center-center-up-down": SubResource("Animation_6ycj2")
+}
+
+[node name="center-center-up-down" type="Node3D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_js5wk")
+}
+autoplay = "center-center-up-down"
+
+[node name="cloud_transparent" parent="." instance=ExtResource("1_ox52l")]
