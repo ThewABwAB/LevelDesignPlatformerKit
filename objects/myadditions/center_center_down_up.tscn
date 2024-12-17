@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3wsnw1wdxvih"]
+
+[sub_resource type="Animation" id="Animation_l6v4u"]
+resource_name = "center-center-down-up"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5, 7.5, 10),
+"transitions": PackedFloat32Array(0.5, 2, 0.5, 2, 0.5),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.5, 0), Vector3(0, 0, 0), Vector3(0, 0.5, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hudg5"]
+_data = {
+"center-center-down-up": SubResource("Animation_l6v4u")
+}
+
+[node name="center-center-down-up" type="Node3D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hudg5")
+}
+autoplay = "center-center-down-up"

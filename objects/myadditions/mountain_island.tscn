@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf65af1b1ohlw"]
+
+[ext_resource type="PackedScene" uid="uid://8r4hy1jhwdso" path="res://objects/myadditions/Rocks_Prefab.tscn" id="1_xiwig"]
+
+[node name="Mountain" type="Node3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="rocks-prefab" parent="Node3D" instance=ExtResource("1_xiwig")]
+transform = Transform3D(40, 0, 0, 0, 75, 0, 0, 0, 40, 0, 0, 0)
+
+[node name="rocks-prefab2" parent="Node3D" instance=ExtResource("1_xiwig")]
+transform = Transform3D(34.641, 0, -20, 0, 97.5, 0, 20, 0, 34.641, 0, 0, 0)
+
+[node name="rocks-prefab3" parent="Node3D" instance=ExtResource("1_xiwig")]
+transform = Transform3D(34.641, 0, 20, 0, 82.5, 0, -20, 0, 34.641, 0, 0, 0)
+
+[node name="rocks-prefab4" parent="Node3D" instance=ExtResource("1_xiwig")]
+transform = Transform3D(-1.74846e-06, 0, 40, 0, 52.5, 0, -40, 0, -1.74846e-06, 0, 0, 0)

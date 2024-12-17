@@ -15,6 +15,7 @@ func _on_body_entered(body: Node) -> void:
 	var dir_vector = body.global_position - global_position
 	body.velocity = dir_vector.normalized()*50
 	if not only_push:
+		Audio.play("res://sounds/zapsplat_hurt2.mp3")
 		await get_tree().create_timer(0.75).timeout
 		if body.has_method("player_died"):
 			body.player_died()

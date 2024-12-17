@@ -1,6 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dunqe0l5bq7f4"]
-
-[ext_resource type="PackedScene" uid="uid://bw8h71jgw2ycu" path="res://objects/myadditions/cloud_new.tscn" id="1_ox52l"]
+[gd_scene load_steps=4 format=3 uid="uid://dunqe0l5bq7f4"]
 
 [sub_resource type="Animation" id="Animation_se2p7"]
 length = 0.001
@@ -47,5 +45,3 @@ libraries = {
 "": SubResource("AnimationLibrary_js5wk")
 }
 autoplay = "center-center-up-down"
-
-[node name="cloud_transparent" parent="." instance=ExtResource("1_ox52l")]

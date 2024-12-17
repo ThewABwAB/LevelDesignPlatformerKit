@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://8r4hy1jhwdso" path="res://objects/myadditions/Rocks_Prefab.tscn" id="1_c0e0r"]
 [ext_resource type="PackedScene" uid="uid://cj2o25a7mcceg" path="res://objects/myadditions/Hexagons/shape_hexagon_prefab_sized.tscn" id="2_2wwfw"]
 [ext_resource type="PackedScene" uid="uid://bdhjrlhycijdq" path="res://models/props/block-snow-overhang-low-hexagon.glb" id="3_cjdhv"]
-[ext_resource type="PackedScene" uid="uid://cpbsa0m0mtt1y" path="res://objects/myadditions/snow_hexagon.tscn" id="4_a6i1r"]
+[ext_resource type="PackedScene" uid="uid://cpbsa0m0mtt1y" path="res://objects/myadditions/CloudArea/snow_hexagon.tscn" id="4_a6i1r"]
 [ext_resource type="PackedScene" uid="uid://dl70c7enwrsu2" path="res://models/props/block-snow-low-hexagon.glb" id="4_lilu6"]
 
 [node name="Mounatain-island-base" type="Node3D"]

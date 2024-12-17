@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvra8cwy25ec2"]
 
 [ext_resource type="PackedScene" uid="uid://8r4hy1jhwdso" path="res://objects/myadditions/Rocks_Prefab.tscn" id="1_x5bwy"]
-[ext_resource type="PackedScene" uid="uid://cpbsa0m0mtt1y" path="res://objects/myadditions/snow_hexagon.tscn" id="2_4niqe"]
+[ext_resource type="PackedScene" uid="uid://cpbsa0m0mtt1y" path="res://objects/myadditions/CloudArea/snow_hexagon.tscn" id="2_4niqe"]
 
 [node name="cloud_mountain" type="Node3D"]
 
