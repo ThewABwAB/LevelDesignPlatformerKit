@@ -2,7 +2,7 @@
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ymoxt"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_4idm0"]
-[ext_resource type="AudioStream" uid="uid://cjoq41q57refi" path="res://sounds/music_zapsplat_game_music_mystery_underscore_airy_dark_tension_006.mp3" id="2_s37sb"]
+[ext_resource type="AudioStream" uid="uid://dxls1eqji22di" path="res://sounds/music_zapsplat_game_music_childrens_soft_arp_warm_fun_001.mp3" id="2_sfmkc"]
 [ext_resource type="Script" path="res://scripts/view.gd" id="3_3fnk4"]
 [ext_resource type="PackedScene" uid="uid://8r4hy1jhwdso" path="res://objects/myadditions/Rocks_Prefab.tscn" id="7_7w2i7"]
 [ext_resource type="PackedScene" uid="uid://b6s034ltas3un" path="res://objects/myadditions/Hexagons/block_grass_overhang_low_hexagon_prefab.tscn" id="8_jckcr"]
@@ -123,7 +123,7 @@ environment = ExtResource("1_ymoxt")
 camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_s37sb")
+stream = ExtResource("2_sfmkc")
 volume_db = -15.928
 autoplay = true
 parameters/looping = true
