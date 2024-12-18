@@ -901,7 +901,7 @@ movement_speed = 3.0
 is_on_from_start = false
 
 [node name="platform-moving3" parent="World/moiving_platforms_with_buttons" instance=ExtResource("23_7hryr")]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 7.67215, 36.6769, 15.6481)
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 6.0564, 13.8628, 16.2956)
 
 [node name="button" parent="World/moiving_platforms_with_buttons/platform-moving3" node_paths=PackedStringArray("target") instance=ExtResource("24_b1a0o")]
 transform = Transform3D(1, 0, 7.45058e-08, 0, 1, 0, -7.45058e-08, 0, 1, -0.0173597, 0.413467, 0.0344315)
@@ -2907,7 +2907,7 @@ transform = Transform3D(-0.155969, 0, 0.987762, 0, 1, 0, -0.987762, 0, -0.155969
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5646, 1.44161, 10.4666)
 
 [node name="Mounatain-island-base" parent="." instance=ExtResource("64_yhpfm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.9431, 29.844, -18.0895)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.9431, 19.9456, -18.0895)
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]
