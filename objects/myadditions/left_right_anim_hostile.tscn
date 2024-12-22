@@ -74,4 +74,4 @@ autoplay = "left-right"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("1_cdgg8")
-max_distance = 45.0
+max_distance = 40.0

@@ -298,7 +298,6 @@ transform = Transform3D(1.64546, 0, 0.950004, 0, 1.9, 0, -0.950004, 0, 1.64546, 
 metadata/_edit_group_ = true
 
 [node name="door-arch" parent="World/Start/arch" instance=ExtResource("33_cb75n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="starting-island" type="Node3D" parent="World/Start"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.8776, 0.120667, 0.328896)
